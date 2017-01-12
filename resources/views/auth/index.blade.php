@@ -26,18 +26,19 @@
 
                                 <div class="space-6"></div>
 
-                                <form>
+                                <form role="form" method="POST" action="{{ url('/auth/login') }}">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <fieldset>
                                         <label class="block clearfix">
                                             <span class="block input-icon input-icon-right">
-                                                <input type="text" class="form-control" placeholder="Username" />
+                                                <input type="text" name="email" class="form-control" placeholder="Username" />
                                                 <i class="ace-icon fa fa-user"></i>
                                             </span>
                                         </label>
 
                                         <label class="block clearfix">
                                             <span class="block input-icon input-icon-right">
-                                                <input type="password" class="form-control" placeholder="Password" />
+                                                <input type="password" name="password" class="form-control" placeholder="Password" />
                                                 <i class="ace-icon fa fa-lock"></i>
                                             </span>
                                         </label>
@@ -54,6 +55,7 @@
                                                 <i class="ace-icon fa fa-key"></i>
                                                 <span class="bigger-110">Login</span>
                                             </button>
+                                            <button type="submit" class="btn btn-lg btn-success btn-block">Logindd</button>
                                         </div>
 
                                         <div class="space-4"></div>
