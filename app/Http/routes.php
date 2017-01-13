@@ -22,11 +22,13 @@ Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
+	'auth/login' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::controller('admin/dashboard'	, 'admin\DashboardController' 	); 	
+	
 Route::group(['namespace'=> 'Admin' , 'middleware' => 'auth'] , function(){	
+    Route::controller('admin/dashboard'	, 'DashboardController' 	); 
 //	Route::controller('admin/auth'	, 'AuthController' 	); 	
 	//Route::controller('admin/destination'	, 'DestinationController' 	); 	
 	//Route::controller('admin/holidayhome'	, 'HolidayhomeController' 	); 	

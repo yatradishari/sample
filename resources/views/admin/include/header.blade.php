@@ -74,7 +74,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href=" {{ URL::to('/admin/logout') }}" >
                                 <i class="fa fa-power-off"></i>
                                 <span>Logout</span>
                             </a>

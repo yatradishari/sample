@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\Registrar;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Support\Facades\Input;
 use Auth;
+Use Redirect;
 
 class AuthController extends Controller {
 
@@ -43,12 +44,20 @@ class AuthController extends Controller {
          return View('auth.index');
     }
     
+    public function getLogin()
+    {
+        
+        // return View('admin.dashboard.index');
+         return View('auth.index');
+    }
+    
     public function postLogin()
 	{
 
 		$username = Input::get('email');
 		$password = Input::get('password');
 		
+        
 		$remember = (Input::has('remember')) ? true : false;
 		$auth = Auth::attempt(
 			[
@@ -56,11 +65,12 @@ class AuthController extends Controller {
 				'password'  => $password   
 			], $remember
 		);
+        
 		if ($auth) {
 			$user_type=Auth::user()->user_type;
+            
 			if($user_type=="1")
-			{
-				//dd("a");
+			{				
 				return Redirect::intended('admin/dashboard');
 			}
 			else
@@ -80,7 +90,7 @@ class AuthController extends Controller {
 	{
 		Auth::logout();
 
-		return Redirect::to('/admin/login')
+		return Redirect::to('/auth')
 		->withInput()
 		->with('message', 'You have logout successfully.');
 	}
