@@ -1,172 +1,483 @@
-<ul class="nav main-menu">
-    <li>
-        <a href="/dashboard" class="ajax-link">
-            <i class="fa fa-dashboard"></i>
-            <span class="hidden-xs">Dashboard</span>
-        </a>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-bar-chart-o"></i>
-            <span class="hidden-xs">Charts</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/charts_xcharts.html">xCharts</a></li>
-            <li><a class="ajax-link" href="ajax/charts_flot.html">Flot Charts</a></li>
-            <li><a class="ajax-link" href="ajax/charts_google.html">Google Charts</a></li>
-            <li><a class="ajax-link" href="ajax/charts_morris.html">Morris Charts</a></li>
-            <li><a class="ajax-link" href="ajax/charts_amcharts.html">AmCharts</a></li>
-            <li><a class="ajax-link" href="ajax/charts_chartist.html">Chartist</a></li>
-            <li><a class="ajax-link" href="ajax/charts_coindesk.html">CoinDesk realtime</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-table"></i>
-             <span class="hidden-xs">Tables</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/tables_simple.html">Simple Tables</a></li>
-            <li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
-            <li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-pencil-square-o"></i>
-             <span class="hidden-xs">Forms</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/forms_elements.html">Elements</a></li>
-            <li><a class="ajax-link" href="ajax/forms_layouts.html">Layouts</a></li>
-            <li><a class="ajax-link" href="ajax/forms_file_uploader.html">File Uploader</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-desktop"></i>
-             <span class="hidden-xs">UI Elements</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/ui_grid.html">Grid</a></li>
-            <li><a class="ajax-link" href="ajax/ui_buttons.html">Buttons</a></li>
-            <li><a class="ajax-link" href="ajax/ui_progressbars.html">Progress Bars</a></li>
-            <li><a class="ajax-link" href="ajax/ui_jquery-ui.html">Jquery UI</a></li>
-            <li><a class="ajax-link" href="ajax/ui_icons.html">Icons</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-list"></i>
-             <span class="hidden-xs">Pages</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="ajax/page_login.html">Login</a></li>
-            <li><a href="ajax/page_register.html">Register</a></li>
-            <li><a id="locked-screen" class="submenu" href="ajax/page_locked.html">Locked Screen</a></li>
-            <li><a class="ajax-link" href="ajax/page_contacts.html">Contacts</a></li>
-            <li><a class="ajax-link" href="ajax/page_feed.html">Feed</a></li>
-            <li><a class="ajax-link add-full" href="ajax/page_messages.html">Messages</a></li>
-            <li><a class="ajax-link" href="ajax/page_pricing.html">Pricing</a></li>
-            <li><a class="ajax-link" href="ajax/page_product.html">Product</a></li>
-            <li><a class="ajax-link" href="ajax/page_invoice.html">Invoice</a></li>
-            <li><a class="ajax-link" href="ajax/page_search.html">Search Results</a></li>
-            <li><a class="ajax-link" href="ajax/page_404.html">Error 404</a></li>
-            <li><a href="ajax/page_500.html">Error 500</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-map-marker"></i>
-            <span class="hidden-xs">Maps</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/maps.html">OpenStreetMap</a></li>
-            <li><a class="ajax-link" href="ajax/map_fullscreen.html">Fullscreen map</a></li>
-            <li><a class="ajax-link" href="ajax/map_leaflet.html">Leaflet</a></li>
-        </ul>
-    </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-picture-o"></i>
-             <span class="hidden-xs">Gallery</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="ajax-link" href="ajax/gallery_simple.html">Simple Gallery</a></li>
-            <li><a class="ajax-link" href="ajax/gallery_flickr.html">Flickr Gallery</a></li>
-        </ul>
-    </li>
-    <li>
-         <a class="ajax-link" href="ajax/typography.html">
-             <i class="fa fa-font"></i>
-             <span class="hidden-xs">Typography</span>
-        </a>
-    </li>
-     <li>
-        <a class="ajax-link" href="ajax/calendar.html">
-             <i class="fa fa-calendar"></i>
-             <span class="hidden-xs">Calendar</span>
-        </a>
-     </li>
-    <li class="dropdown">
-        <a href="#" class="dropdown-toggle">
-            <i class="fa fa-picture-o"></i>
-             <span class="hidden-xs">Multilevel menu</span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="#">First level menu</a></li>
-            <li><a href="#">First level menu</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">
-                    <i class="fa fa-plus-square"></i>
-                    <span class="hidden-xs">Second level menu group</span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Second level menu</a></li>
-                    <li><a href="#">Second level menu</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="fa fa-plus-square"></i>
-                            <span class="hidden-xs">Three level menu group</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Three level menu</a></li>
-                            <li><a href="#">Three level menu</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="fa fa-plus-square"></i>
-                                    <span class="hidden-xs">Four level menu group</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Four level menu</a></li>
-                                    <li><a href="#">Four level menu</a></li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle">
-                                            <i class="fa fa-plus-square"></i>
-                                            <span class="hidden-xs">Five level menu group</span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Five level menu</a></li>
-                                            <li><a href="#">Five level menu</a></li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle">
-                                                    <i class="fa fa-plus-square"></i>
-                                                    <span class="hidden-xs">Six level menu group</span>
-                                                </a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Six level menu</a></li>
-                                                    <li><a href="#">Six level menu</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Three level menu</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
+<ul class="nav nav-list">
+					<li class="active">
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Dashboard </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text">
+								UI &amp; Elements
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="#" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
+
+									Layouts
+									<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+
+								<ul class="submenu">
+									<li class="">
+										<a href="top-menu.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Top Menu
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="two-menu-1.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 1
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="two-menu-2.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Two Menus 2
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="mobile-menu-1.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Default Mobile Menu
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="mobile-menu-2.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 2
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="mobile-menu-3.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Mobile Menu 3
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+								</ul>
+							</li>
+
+							<li class="">
+								<a href="typography.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Typography
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="elements.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Elements
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="buttons.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Buttons &amp; Icons
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="content-slider.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Content Sliders
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="treeview.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Treeview
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="jquery-ui.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									jQuery UI
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="nestable-list.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Nestable Lists
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="#" class="dropdown-toggle">
+									<i class="menu-icon fa fa-caret-right"></i>
+
+									Three Level Menu
+									<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+
+								<ul class="submenu">
+									<li class="">
+										<a href="#">
+											<i class="menu-icon fa fa-leaf green"></i>
+											Item #1
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
+									<li class="">
+										<a href="#" class="dropdown-toggle">
+											<i class="menu-icon fa fa-pencil orange"></i>
+
+											4th level
+											<b class="arrow fa fa-angle-down"></b>
+										</a>
+
+										<b class="arrow"></b>
+
+										<ul class="submenu">
+											<li class="">
+												<a href="#">
+													<i class="menu-icon fa fa-plus purple"></i>
+													Add Product
+												</a>
+
+												<b class="arrow"></b>
+											</li>
+
+											<li class="">
+												<a href="#">
+													<i class="menu-icon fa fa-eye pink"></i>
+													View Products
+												</a>
+
+												<b class="arrow"></b>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list"></i>
+							<span class="menu-text"> Tables </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="tables.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Simple &amp; Dynamic
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="jqgrid.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									jqGrid plugin
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text"> Forms </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="form-elements.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="form-elements-2.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Form Elements 2
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="form-wizard.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wizard &amp; Validation
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="wysiwyg.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Wysiwyg &amp; Markdown
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="dropzone.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Dropzone File Upload
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="widgets.html">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text"> Widgets </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="calendar.html">
+							<i class="menu-icon fa fa-calendar"></i>
+
+							<span class="menu-text">
+								Calendar
+
+								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
+									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
+								</span>
+							</span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="gallery.html">
+							<i class="menu-icon fa fa-picture-o"></i>
+							<span class="menu-text"> Gallery </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-tag"></i>
+							<span class="menu-text"> More Pages </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="profile.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									User Profile
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="inbox.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Inbox
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="pricing.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Pricing Tables
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="invoice.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Invoice
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="timeline.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Timeline
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="search.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Search Results
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="email.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Email Templates
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="login.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Login &amp; Register
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
+
+							<span class="menu-text">
+								Other Pages
+
+								<span class="badge badge-primary">5</span>
+							</span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class="">
+								<a href="faq.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									FAQ
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="error-404.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Error 404
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="error-500.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Error 500
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="grid.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Grid
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+
+							<li class="">
+								<a href="blank.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Blank Page
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+				</ul><!-- /.nav-list -->
+
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
