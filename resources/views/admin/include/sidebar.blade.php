@@ -476,14 +476,6 @@
 							</li>
 						</ul>
 					</li>
-                    <li class="">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
-							<span class="menu-text"> Destination </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">

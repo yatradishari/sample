@@ -13,10 +13,8 @@
 
 Route::get('/', 'WelcomeController@index');
 
-//Route::get('home', 'HomeController@index');
-//Route::get('destination', 'DestinationController@index');
-Route::controller('destination', 'DestinationController');
-Route::controller('contact', 'ContactController');
+Route::get('home', 'HomeController@index');
+
 //Route::controllers([
 //	'auth' => 'Auth\AuthController',
 	//'password' => 'Auth\PasswordController',
@@ -37,6 +35,3 @@ Route::group(['namespace'=> 'Admin' , 'middleware' => 'auth'] , function(){
 	//Route::controller('admin/banner'	, 'BannerController' 	); 	
 	//Route::controller('admin/settings'	, 'SettingsController' 	); 	
 });
-
-
-

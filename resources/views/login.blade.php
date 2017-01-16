@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>Login Page - Ace Admin</title>
 
-<head>
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="{{ asset('/admin/assets/css/bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ asset('/admin/assets/font-awesome/4.5.0/css/font-awesome.min.css') }}" />
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+		<!-- text fonts -->
+		<link rel="stylesheet" href="{{ asset('/admin/assets/css/fonts.googleapis.com.css') }}" />
 
-    <!-- Bootstrap Core CSS -->   
-	<link rel="stylesheet" href="{{ asset('/public/admin/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+		<!-- ace styles -->
+		<link rel="stylesheet" href="{{ asset('/admin/assets/css/ace.min.css') }}" />
 
-    <!-- MetisMenu CSS -->   
-	<link rel="stylesheet" href="{{ asset('/public/admin/bower_components/metisMenu/dist/metisMenu.min.css') }}">
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="{{ asset('/admin/assets/css/ace-part2.min.css') }}" />
+		<![endif]-->
+		<link rel="stylesheet" href="{{ asset('/admin/assets/css/ace-rtl.min.css') }}" />
 
-    <!-- Timeline CSS -->    
-	<link rel="stylesheet" href="{{ asset('/public/admin/dist/css/timeline.css') }}">
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="{{ asset('/admin/assets/css/ace-ie.min.css') }}" />
+		<![endif]-->
 
-    <!-- Custom CSS -->    
-	<link rel="stylesheet" href="{{ asset('/public/admin/dist/css/sb-admin-2.css') }}">
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
-    <!-- Morris Charts CSS -->    
-	<link rel="stylesheet" href="{{ asset('/public/admin/bower_components/morrisjs/morris.css') }}">
+		<!--[if lte IE 8]>
+		<script src="{{ asset('/admin/assets/js/html5shiv.min.js') }}"></script>
+		<script src="{{ asset('/admin/assets/js/respond.min.js') }}"></script>
+		<![endif]-->
+	</head>
 
-    <!-- Custom Fonts -->   
-	<link rel="stylesheet" href="{{ asset('/public/admin/bower_components/font-awesome/css/font-awesome.min.css') }}">
+	<body class="login-layout">
+		<div class="main-container">
+			<div class="main-content">
+				@yield('content')
+			</div><!-- /.main-content -->
+		</div><!-- /.main-container -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+		<!-- basic scripts -->
 
-</head>
+		<!--[if !IE]> -->
+		<script src="{{ asset('/admin/assets/js/jquery-2.1.4.min.js') }}"></script>
 
-<body>
+		<!-- <![endif]-->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form" method="POST" action="{{ url('/admin/login') }}">
-							<input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="text" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->                               
-								<button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /#wrapper -->
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
 
-    <!-- jQuery -->    
-	<script src="{{ asset('/public/admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
-
-    <!-- Bootstrap Core JavaScript -->    
-	<script src="{{ asset('/public/admin/bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->   
-	<script src="{{ asset('/public/admin/bower_components/metisMenu/dist/metisMenu.min.js') }}"></script>
-
-    <!-- Morris Charts JavaScript -->   
-	<script src="{{ asset('/public/admin/bower_components/raphael/raphael-min.js') }}"></script>
-    
-	<script src="{{ asset('/public/admin/bower_components/morrisjs/morris.min.js') }}"></script>
-    
-	<script src="{{ asset('/public/admin/js/morris-data.js') }}"></script>
-
-    <!-- Custom Theme JavaScript --> 
-	<script src="{{ asset('/public/admin/dist/js/sb-admin-2.js') }}"></script>
-
-</body>
-
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+			 $(document).on('click', '.toolbar a[data-target]', function(e) {
+				e.preventDefault();
+				var target = $(this).data('target');
+				$('.widget-box.visible').removeClass('visible');//hide others
+				$(target).addClass('visible');//show target
+			 });
+			});
+			
+			
+			
+			//you don't need this, just used for changing background
+			jQuery(function($) {
+			 $('#btn-login-dark').on('click', function(e) {
+				$('body').attr('class', 'login-layout');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-light').on('click', function(e) {
+				$('body').attr('class', 'login-layout light-login');
+				$('#id-text2').attr('class', 'grey');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-blur').on('click', function(e) {
+				$('body').attr('class', 'login-layout blur-login');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'light-blue');
+				
+				e.preventDefault();
+			 });
+			 
+			});
+		</script>
+	</body>
 </html>
