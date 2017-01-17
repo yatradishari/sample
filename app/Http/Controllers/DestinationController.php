@@ -32,5 +32,10 @@ class DestinationController extends Controller {
 	{        
 		return view('destination.list');
 	}
+    
+    public function getDetails($id)
+	{        
+		return view('destination.details');
+	}
 
 }

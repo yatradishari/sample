@@ -5,20 +5,12 @@
     <div class="filter-links filterable-nav">
         <select class="mobile-filter">
             <option value="*">Show all</option>
-            <option value=".south-america">South America</option>
-            <option value=".asia">Asia</option>
-            <option value=".africa">Africa</option>
-            <option value=".north-america">North America</option>
-            <option value=".europe">Europe</option>
-            <option value=".australia">Australia</option>	
+            <option value=".south-america">Popular</option>
+            <option value=".asia">Offbeat</option>            
         </select>
         <a href="#" class=" current wow fadeInRight" data-filter="*">Show all</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay=".2s" data-filter=".south-america">South America</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".asia">Asia</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay=".6s" data-filter=".africa">Africa</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay=".8s" data-filter=".north-america">North America</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay="1s" data-filter=".europe">Europe</a>
-        <a href="#" class="wow fadeInRight" data-wow-delay="1.2s" data-filter=".australia">Australia</a>
+        <a href="#" class="wow fadeInRight" data-wow-delay=".2s" data-filter=".south-america">Popular</a>
+        <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".asia">Offbeat</a>        
     </div>
     <div class="filterable-items">
         <div class="filterable-item south-america">
@@ -26,7 +18,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-1.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -39,7 +31,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-2.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -52,7 +44,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-3.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -65,7 +57,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-1.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -78,7 +70,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-2.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -91,7 +83,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-3.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -104,7 +96,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-1.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -117,7 +109,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-2.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -130,7 +122,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-3.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -143,7 +135,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-1.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -156,7 +148,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-2.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>
@@ -169,7 +161,7 @@
                 <figure class="featured-image">
                     <img src="../public/front/dummy/offer-thumbnail-3.jpg" alt="">
                 </figure>
-                <h2 class="entry-title"><a href="#">Efficitur efficitur convallis</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/1') }}">Efficitur efficitur convallis</a></h2>
                 <p>Sed vitae fermentum lacus in augue massa pellentesque mauris vel iaculis sclerisque nulla</p>
                 <div class="price">
                     <strong>$2900</strong>

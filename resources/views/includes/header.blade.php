@@ -2,18 +2,19 @@
     <div class="container">
         <div class="header-content">
             <div class="branding">
-                <img src="../public/front/images/logo.png" alt="Company Name" class="logo">
-                <h1 class="site-title"><a href="{{ url('/') }}">Company Name</a></h1>
-                <small class="site-description">Tagline goes here</small>
+                <img src="{{ URL::to('/front/images/logo.png') }}" alt="{{ settings('COMPANY_NAME') }}" class="logo">
+                <h1 class="site-title"><a href="{{ url('/') }}">{{ settings('COMPANY_NAME') }}</a></h1>
+                <small class="site-description">{{ settings('COMPANY_TAGLINE') }}</small>
             </div>
             
             <nav class="main-navigation">
                 <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-                <ul class="menu">
-                    <li class="menu-item"><a href="about-us.html">About us</a></li>
+                <ul class="menu">                    
                     <li class="menu-item active"><a class="hover" href="{{ url('/destinations') }}">Destinations</a></li>
-                    <li class="menu-item"><a href="{{ url('/touroperators') }}">Tour Operators</a></li>
+                    <li class="menu-item"><a href="javascript:void(0);">Holiday Homes</a></li>
                     <li class="menu-item"><a href="{{ url('/contactus') }}">Contact</a></li>
+                    <li class="menu-item"><a href="{{ url('/touroperators') }}">Tour Operators</a></li>
+                    <li class="menu-item"><a href="javascript:void(0);">Blog</a></li>
                 </ul>
             </nav>
             
@@ -26,7 +27,7 @@
         </div>
         
         <nav class="breadcrumbs">
-            <a href="index.html">Home</a> &rarr;
+            <a href="{{ url('/') }}">Home</a> &rarr;
             <span>@yield('title')</span>
         </nav>
         
