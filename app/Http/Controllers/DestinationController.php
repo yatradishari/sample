@@ -51,10 +51,11 @@ class DestinationController extends Controller {
 							
 		$destinationimage=Destinationimage::where('destination_id',$id)
 							->where('status',1)
+							->where('deleted',0)
 							->orderBy('id','DESC')
 							->get();
         
-       // dd($destinations->toArray());	        
+        //dd($destinationimage->toArray());	        
 		return view('destination.details', [ 'destinations' => $destinations, 'destinationimage' => $destinationimage]);
 	}
 

@@ -8,6 +8,11 @@
 		<title>@yield('title') | {{ settings('SITE_NAME') }}</title>
         <meta name="description" content="{{ settings('META_DESCRIPTIONS') }}">
         <meta name="keywords" content="{{ settings('META_KEYWORDS') }}">
+        
+        <!-- Open Graph data for social share -->
+        @yield('social_share')
+        <!-- //Open Graph data for social share -->
+        
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,700" rel="stylesheet" type="text/css">
 		<link href="{{ asset('/front/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
