@@ -32,8 +32,9 @@ class DestinationController extends Controller {
 	 */
 	public function getIndex()
 	{ 
+        
         $destinations=Destination::where('visibility',1)						 
-							->where('deleted',0)
+							->where('deleted',0)							
 							->with('state_name','primary_image')	
 							->orderBy('location_name','ASC')		
 							->get();
