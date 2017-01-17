@@ -34,12 +34,12 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
                         <div class="avatar">
-                            <img src="{{ asset('/admin/img/avatar.jpg') }}" class="img-circle" alt="avatar" />
+                            <img src="{{ asset('/public/admin/img/avatar.jpg') }}" class="img-circle" alt="avatar" />
                         </div>
                         <i class="fa fa-angle-down pull-right"></i>
                         <div class="user-mini pull-right">
                             <span class="welcome">Welcome,</span>
-                            <span>Jane Devoops</span>
+                            <span>Jane Devoopssss</span>
                         </div>
                     </a>
                     <ul class="dropdown-menu">

@@ -14,6 +14,9 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::controller('destinations', 'DestinationController');
+Route::controller('touroperators', 'OperatorController');
+Route::controller('contactus', 'ContactController');
 
 //Route::controllers([
 //	'auth' => 'Auth\AuthController',
