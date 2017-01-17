@@ -5,7 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Home Travel</title>
+		<title>@yield('title') | {{ settings('SITE_NAME') }}</title>
+        <meta name="description" content="{{ settings('META_DESCRIPTIONS') }}">
+        <meta name="keywords" content="{{ settings('META_KEYWORDS') }}">
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,700" rel="stylesheet" type="text/css">
 		<link href="{{ asset('/front/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
@@ -23,7 +25,7 @@
 	<body class="slider-collapse">
 		
 		<div id="site-content">			
-			@include('includes.header')
+			@include('includes.header_home')
 			<main class="content">
                 @include('includes.banner')
 				<div class="fullwidth-block features-section">
@@ -151,53 +153,13 @@
 			</main> <!-- .content -->
 
 			<footer class="site-footer wow fadeInUp">
-				<div class="footer-top">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3 col-sm-6">
-								<div class="widget">
-									<h3 class="widget-title">About us</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus animi asperiores magnam ducimus laboriosam soluta, odio doloribus, voluptas numquam facilis consectetur nam in repudiandae commodi odit iste sed doloremque repellat.</p>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="widget">
-									<h3 class="widget-title">Helpful Links</h3>
-									<ul class="list-arrow">
-										<li><a href="#">Labore et dolore magnam</a></li>
-										<li><a href="#">Dolore magnam</a></li>
-										<li><a href="#">Magnam Labore et</a></li>
-										<li><a href="#">Dolore mabore magnam</a></li>
-										<li><a href="#">Et dolore magnam</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="widget">
-									<h3 class="widget-title">Helpful Links</h3>
-									<ul class="list-arrow">
-										<li><a href="#">Labore et dolore magnam</a></li>
-										<li><a href="#">Dolore magnam</a></li>
-										<li><a href="#">Magnam Labore et</a></li>
-										<li><a href="#">Dolore mabore magnam</a></li>
-										<li><a href="#">Et dolore magnam</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<div class="widget widget-customer-info">
-									<h3 class="widget-title">Customer Service</h3>
-									<img src="../public/front/dummy/footer-customer-service.jpg" alt="" class="pull-left">
-									<div class="cs-info">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim voluptates pariatur vero.</p>
-										<p>+1 421 458 321 <br> <a href="mailto:cs@companyname.com">cs@companyname.com</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<!-- site-footer-bottom -->
+				@include('includes.footer_top')
+                <!-- //site-footer-bottom -->	
+				
+                <!-- site-footer-bottom -->
 				@include('includes.footer')
+                <!-- //site-footer-bottom -->
 			</footer> <!-- .site-footer -->
 
 		</div> <!-- #site-content -->

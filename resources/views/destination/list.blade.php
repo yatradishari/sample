@@ -1,3 +1,4 @@
+@section('title') Destination @stop
 @extends('app')
 
 @section('content')

@@ -11,7 +11,7 @@
                 <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                 <ul class="menu">
                     <li class="menu-item"><a href="about-us.html">About us</a></li>
-                    <li class="menu-item active"><a class="hover" href="{{ url('/destinations') }}">Destinations</a></li>
+                    <li class="menu-item"><a href="{{ url('/destinations') }}">Destinations</a></li>
                     <li class="menu-item"><a href="{{ url('/touroperators') }}">Tour Operators</a></li>
                     <li class="menu-item"><a href="{{ url('/contactus') }}">Contact</a></li>
                 </ul>
@@ -24,11 +24,5 @@
 				<a href="{{ settings('SITE_NAME') }}" target="_blank" class="pinterest"><i class="fa fa-pinterest"></i></a>
             </div>
         </div>
-        
-        <nav class="breadcrumbs">
-            <a href="index.html">Home</a> &rarr;
-            <span>@yield('title')</span>
-        </nav>
-        
     </div>
 </header> <!-- .site-header -->

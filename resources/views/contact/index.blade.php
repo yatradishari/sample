@@ -1,3 +1,4 @@
+@section('title') Contact Us @stop
 @extends('app')
 
 @section('content')

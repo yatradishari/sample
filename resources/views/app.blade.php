@@ -5,7 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Customer Protection</title>
+		<title>@yield('title') | {{ settings('SITE_NAME') }}</title>
+        <meta name="description" content="{{ settings('META_DESCRIPTIONS') }}">
+        <meta name="keywords" content="{{ settings('META_KEYWORDS') }}">
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,600,700" rel="stylesheet" type="text/css">
 		<link href="{{ asset('/front/fonts/font-awesome.min.css') }}" rel="stylesheet" type="text/css">

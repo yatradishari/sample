@@ -1,3 +1,4 @@
+@section('title') Travel Agents @stop
 @extends('app')
 
 @section('content')
