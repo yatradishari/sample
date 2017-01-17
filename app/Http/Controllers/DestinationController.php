@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
-
+use App\Model\Destination;
+use App\Model\State;
+use App\Model\Destinationimage;
 class DestinationController extends Controller {
 
 	/*
@@ -29,13 +31,31 @@ class DestinationController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex()
-	{        
-		return view('destination.list');
+	{ 
+        $destinations=Destination::where('visibility',1)						 
+							->where('deleted',0)
+							->with('state_name','primary_image')	
+							->orderBy('location_name','ASC')		
+							->get();
+                            //->paginate(4);
+		return view('destination.list', [ 'destinations' => $destinations]);
 	}
     
     public function getDetails($id)
-	{        
-		return view('destination.details');
+	{  
+        $destinations=Destination::where('visibility',1)						 
+							->where('deleted',0)
+							->where('id',$id)
+							->with('state_name','primary_image')								
+							->get();	
+							
+		$destinationimage=Destinationimage::where('destination_id',$id)
+							->where('status',1)
+							->orderBy('id','DESC')
+							->get();
+        
+       // dd($destinations->toArray());	        
+		return view('destination.details', [ 'destinations' => $destinations, 'destinationimage' => $destinationimage]);
 	}
 
 }

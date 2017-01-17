@@ -1,36 +1,22 @@
 <div class="slider">
     <ul class="slides">
-        <li data-background="../public/front/dummy/slide-1.jpg">
+        @foreach($banners as $banner)
+        <li data-background="{{ URL::to('/uploads/banners/'.$banner->banners_name) }}">
             <div class="container">
                 <div class="slide-caption col-md-4">
-                    <h2 class="slide-title">Venenatis felis pulvinar ultrices</h2>
-                    <p>Consectetur adipisicing elit. Dignissimos fuga eos nihil repellat et enim, neque, aliquid delectus quia hic praesentium sit, repudiandae pariatur deleniti vero.</p>
+                    <h2 class="slide-title">{{$banner->image_title}}</h2>
+					<p>{{$banner->image_description}}</p>
                 </div>
             </div>
         </li>
-        <li data-background="../public/front/dummy/slide-2.jpg">
-            <div class="container">
-                <div class="slide-caption col-md-4">
-                    <h2 class="slide-title">Venenatis felis pulvinar ultrices</h2>
-                    <p>Consectetur adipisicing elit. Pariatur, ut assumenda, delectus illo est dignissimos maiores quisquam rem nulla harum ratione, dolorum recusandae, unde cumque sint</p>
-                </div>
-            </div>
-        </li>
-        <li data-background="../public/front/dummy/slide-3.jpg">
-            <div class="container">
-                <div class="slide-caption col-md-4">
-                    <h2 class="slide-title">Venenatis felis pulvinar ultrices</h2>
-                    <p>Consectetur adipisicing elit. Facere excepturi itaque quasi dolorem deserunt nesciunt neque debitis incidunt voluptatem, laudantium, odio fugit. Obcaecati fugiat perferendis numquam?</p>
-                </div>
-            </div>
-        </li>
+        @endforeach        
     </ul>
     <div class="flexslider-controls">
         <div class="container">
             <ol class="flex-control-nav">
-                <li><a>1</a></li>
-                <li><a>2</a></li>
-                <li><a>3</a></li>
+                @for($i=1; $i<=count($banners); $i++)
+				<li><a>{{$i}}</a></li>
+				@endfor	
             </ol>
         </div>
     </div>

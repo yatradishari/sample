@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use App\Model\Banner;
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +30,12 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+        $banner=Banner::where('deleted',0)->orderBy('display_order','ASC')->get();
+		//return view('welcome');
+        return view('welcome', [ 
+			//'destinations' => $destinations,
+			'banners' => $banner
+		]);
 	}
 
 }

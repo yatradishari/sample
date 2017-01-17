@@ -636,7 +636,7 @@ table {
   content: " ";
   width: 23px;
   height: 11px;
-  background: url(images/long-arrow.png) no-repeat;
+  /*background: url(images/long-arrow.png) no-repeat;*/
   position: absolute;
   right: 10px;
   top: 0;
