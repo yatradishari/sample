@@ -26,9 +26,8 @@
                 </figure>
                 <h2 class="entry-title"><a href="{{ url('/destinations/details/'.$destination->id) }}">{{ $destination->location_name}}</a></h2>
                 <p>{{ short($destination->description ) }}</p>
-                <div class="price">
-                    <strong>$2900</strong>
-                    <small>/10 days</small>
+                <div class="price">                    
+                    <small><i class="fa fa-map-marker"></i> {{ $destination->state_name->name }}</small>
                 </div>
             </article>
         </div>
