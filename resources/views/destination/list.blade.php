@@ -2,7 +2,7 @@
 @extends('app')
 
 @section('content')
-    <div class="filter-links filterable-nav">
+    <!-- <div class="filter-links filterable-nav">
         <select class="mobile-filter">
             <option value="*">Show all</option>
             <option value=".south-america">Popular</option>
@@ -11,16 +11,16 @@
         <a href="#" class=" current wow fadeInRight" data-filter="*">Show all</a>
         <a href="#" class="wow fadeInRight" data-wow-delay=".2s" data-filter=".south-america">Popular</a>
         <a href="#" class="wow fadeInRight" data-wow-delay=".4s" data-filter=".asia">Offbeat</a>        
-    </div>
+    </div> -->
     <div class="filterable-items">
-        @foreach($destinations as $destination)
-        <div class="filterable-item south-america">
+        @foreach($data as $destination)
+        <div class="filterable-item {{ ($destination->id == 5) ? ' asia' : 'south-america' }}">
             <article class="offer-item">
                 <figure class="featured-image">
                     @if($destination->primary_image['image_name']=="")
-                        <img src="{{ URL::to('/default_icon/no_photo.jpg') }}" alt="{{$destinations[0]->location_name}}">
+                        <img src="{{ URL::to('/default_icon/no_photo.jpg') }}" alt="{{$data[0]->location_name}}">
                     @else
-                        <img src="{{ URL::to('/uploads/destination/'.$destination->primary_image['image_name']) }}" alt="{{$destinations[0]->location_name}}">
+                        <img src="{{ URL::to('/uploads/destination/'.$destination->primary_image['image_name']) }}" alt="{{$data[0]->location_name}}">
                     @endif
                     
                 </figure>
@@ -34,10 +34,7 @@
         @endforeach        
     </div>
 
-    <div class="pagination wow fadeInUp">
-        <span class="page-numbers current">1</span>
-        <a href="#" class="page-numbers">2</a>
-        <a href="#" class="page-numbers">3</a>
-        <a href="#" class="page-numbers">4</a>
-    </div>
+    <!--Pagination Start--> 
+    @include('pagination.default', ['paginator' => $data]) 
+    <!--Pagination End-->     
 @endsection

@@ -31,15 +31,33 @@ class DestinationController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex()
-	{ 
-        
+	{  
+       // $type = 0;
+        //$email = '';
+       // $status = '';
+
+       // if(!empty(Input::get('name')))
+       // {
+      //      $name = Input::get('name');
+       // }
+       // if(!empty(Input::get('email')))
+       // {
+       //     $email = Input::get('email');
+       // }
+       // if(!empty(Input::get('status')))
+       // {
+       //     $status = Input::get('status');
+       // }
+            
+        //dd($type);
         $destinations=Destination::where('visibility',1)						 
-							->where('deleted',0)							
+							->where('deleted',0)		
+                            //->where('email','LIKE','%'.$email.'%')                            
 							->with('state_name','primary_image')	
-							->orderBy('location_name','ASC')		
-							->get();
-                            //->paginate(4);
-		return view('destination.list', [ 'destinations' => $destinations]);
+							->orderBy('location_name','ASC')
+                            ->paginate(env('PER_PAGE'));
+        $destinations->setPath('destinations');
+		return view('destination.list', [ 'data' => $destinations]);        
 	}
     
     public function getDetails($id)
@@ -56,7 +74,7 @@ class DestinationController extends Controller {
 							->orderBy('id','DESC')
 							->get();
         
-        //dd($destinationimage->toArray());	        
+            
 		return view('destination.details', [ 'destinations' => $destinations, 'destinationimage' => $destinationimage]);
 	}
 

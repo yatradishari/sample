@@ -15,12 +15,26 @@
     <div class="col-md-7 wow fadeInLeft">
 
         <h2 class="section-title">{{ $destinations[0]->location_name}}</h2>
-        <span class='st_sharethis_hcount' displayText='ShareThis'></span>
-        <span class='st_facebook_hcount' displayText='Facebook'></span>
-        <span class='st_twitter_hcount' displayText='Tweet'></span>
-        <span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-        <span class='st_pinterest_hcount' displayText='Pinterest'></span>
-        <span class='st_email_hcount' displayText='Email'></span>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer.php?caption={{ $destinations[0]->location_name}}&description={{ $destinations[0]->description}}&u={{ env('SITE_URL') }}&picture={{ env('SITE_URL') }}" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+            </a>
+           
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+            </a>
+           
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url={{Request::url()}}&amp;text={{ $destinations[0]->location_name}}&amp;hashtags=simplesharebuttons" target="_blank">
+                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+            </a>
+           
+            <!-- Email -->
+            <a href="mailto:?Subject=Simple Share Buttons&amp;Body={{ $destinations[0]->location_name}}">
+                <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+            </a>
+            
         <figure>   
             <ul class="bxslider">
               @foreach($destinationimage as $images)

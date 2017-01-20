@@ -2,38 +2,22 @@
     <div class="container">           
         <h2 class="section-title">Popular Destination</h2>
         <div class="row">
+            @foreach($data as $destination)
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <article class="offer wow bounceIn">
-                    <figure class="featured-image"><img src="../public/front/dummy/offer-thumbnail-1.jpg" alt=""></figure>
-                    <h2 class="entry-title"><a href="">Nemo enim ipsam voluptatem</a></h2>
-                    <p>Piditate non provident similique	 sunt in culpa qui oficia deserunt molitia animi est aborum et dolorum fuga</p>
-                    <a href="{{ url('/destinations/details/1') }}" class="button">See details</a>
+                    <figure class="featured-image">
+                        @if($destination->primary_image['image_name']=="")
+                            <img src="{{ URL::to('/default_icon/no_photo.jpg') }}" alt="{{$data[0]->location_name}}">
+                        @else
+                            <img src="{{ URL::to('/uploads/destination/'.$destination->primary_image['image_name']) }}" alt="{{$data[0]->location_name}}">
+                        @endif
+                    </figure>
+                    <h2 class="entry-title"><a href="">{{ $destination->location_name}}</a></h2>
+                    <p>{{ short($destination->description ) }}</p>
+                    <a href="{{ url('/destinations/details/'.$destination->id) }}" class="button">See details</a>
                 </article>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="offer wow bounceIn" data-wow-delay=".2s">
-                    <figure class="featured-image"><img src="../public/front/dummy/offer-thumbnail-2.jpg" alt=""></figure>
-                    <h2 class="entry-title"><a href="">Nemo enim ipsam voluptatem</a></h2>
-                    <p>Piditate non provident similique	 sunt in culpa qui oficia deserunt molitia animi est aborum et dolorum fuga</p>
-                    <a href="{{ url('/destinations/details/1') }}" class="button">See details</a>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="offer wow bounceIn" data-wow-delay=".4s">
-                    <figure class="featured-image"><img src="../public/front/dummy/offer-thumbnail-3.jpg" alt=""></figure>
-                    <h2 class="entry-title"><a href="">Nemo enim ipsam voluptatem</a></h2>
-                    <p>Piditate non provident similique	 sunt in culpa qui oficia deserunt molitia animi est aborum et dolorum fuga</p>
-                    <a href="{{ url('/destinations/details/1') }}" class="button">See details</a>
-                </article>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="offer wow bounceIn" data-wow-delay=".6s">
-                    <figure class="featured-image"><img src="../public/front/dummy/offer-thumbnail-4.jpg" alt=""></figure>
-                    <h2 class="entry-title"><a href="">Nemo enim ipsam voluptatem</a></h2>
-                    <p>Piditate non provident similique	 sunt in culpa qui oficia deserunt molitia animi est aborum et dolorum fuga</p>
-                    <a href="{{ url('/destinations/details/1') }}" class="button">See details</a>
-                </article>
-            </div>
+            @endforeach  
         </div>
     </div>
 </div> 

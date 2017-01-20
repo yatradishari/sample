@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Model\Banner;
+use App\Model\Destination;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -31,10 +33,17 @@ class WelcomeController extends Controller {
 	public function index()
 	{
         $banner=Banner::where('deleted',0)->orderBy('display_order','ASC')->get();
+        
+        $destinations=Destination::where('visibility',1)						 
+							->where('deleted',0)
+							->with('state_name','primary_image')	
+							->orderBy('location_name','ASC')
+                            ->paginate(4);
 		//return view('welcome');
         return view('welcome', [ 
 			//'destinations' => $destinations,
-			'banners' => $banner
+			'banners' => $banner,
+			'data' => $destinations
 		]);
 	}
 
