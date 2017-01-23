@@ -1,7 +1,3 @@
---
--- Table structure for table `banners`
---
-
 DROP TABLE IF EXISTS `banners`;
 CREATE TABLE IF NOT EXISTS `banners` (
   `id` int(10) NOT NULL,
@@ -380,9 +376,20 @@ CREATE TABLE IF NOT EXISTS `holiday_home` (
   `tariff` longtext NOT NULL,
   `phone` varchar(255) NOT NULL,
   `how_to_book` longtext NOT NULL,
+  `visibility` tinyint(2) NOT NULL DEFAULT '1',
+  `deleted` tinyint(2) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `holiday_home`
+--
+
+INSERT INTO `holiday_home` (`id`, `state_id`, `location_id`, `title`, `address`, `description`, `tariff`, `phone`, `how_to_book`, `visibility`, `deleted`, `created_at`, `updated_at`) VALUES
+(1, 1, 5, 'ddddd', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 35, 7, 'ddddd55', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 1, 3, 'fghfgh', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -624,7 +631,7 @@ ALTER TABLE `destination_image`
 -- AUTO_INCREMENT for table `holiday_home`
 --
 ALTER TABLE `holiday_home`
-  MODIFY `id` bigint(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `settings`
 --
