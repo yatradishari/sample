@@ -1,4 +1,4 @@
-@section('title') Destination @stop
+@section('title') Holiday Homes @stop
 @extends('app')
 
 @section('content')
@@ -26,8 +26,8 @@
                 </figure>
                 <h2 class="entry-title"><a href="{{ url('/destinations/details/'.$destination->id) }}">{{ $destination->location_name}}</a></h2>
                 <p>{{ short($destination->description ) }}</p>
-                <div class="price"> 
-                    {!! get_location($destination->id) !!}
+                <div class="price">                    
+                    <i class="fa fa-map-marker" aria-hidden="true"></i><small> {{ $destination->state_name->name }}</small>
                 </div>
             </article>
         </div>

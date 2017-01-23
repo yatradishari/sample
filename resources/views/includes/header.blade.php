@@ -11,9 +11,9 @@
                 <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                 <ul class="menu">                    
                     <li class="menu-item active"><a class="hover" href="{{ url('/destinations') }}">Destinations</a></li>
-                    <li class="menu-item"><a href="javascript:void(0);">Holiday Homes</a></li>
+                    <li class="menu-item"><a href="{{ url('/holidayhomes') }}">Holiday Homes</a></li>
                     <li class="menu-item"><a href="{{ url('/contactus') }}">Contact</a></li>
-                    <li class="menu-item"><a href="{{ url('/touroperators') }}">Tour Operators</a></li>
+                    <li class="menu-item"><a href="{{ url('/touroperators') }}">Our Partners</a></li>
                     <li class="menu-item"><a href="javascript:void(0);">Blog</a></li>
                 </ul>
             </nav>
