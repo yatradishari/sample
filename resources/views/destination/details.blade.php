@@ -16,24 +16,16 @@
 
         <h2 class="section-title">{{ $destinations[0]->location_name}}</h2>
             <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer.php?caption={{ $destinations[0]->location_name}}&description={{ $destinations[0]->description}}&u={{ env('SITE_URL') }}&picture={{ env('SITE_URL') }}" target="_blank">
-                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
-            </a>
+            <a href="https://www.facebook.com/sharer.php?caption={{ $destinations[0]->location_name}}&description={{ $destinations[0]->description}}&u={{ env('SITE_URL') }}&picture={{ env('SITE_URL') }}" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
            
             <!-- Google+ -->
-            <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank">
-                <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
-            </a>
+            <a href="https://plus.google.com/share?url={{Request::url()}}" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
            
             <!-- Twitter -->
-            <a href="https://twitter.com/share?url={{Request::url()}}&amp;text={{ $destinations[0]->location_name}}&amp;hashtags=simplesharebuttons" target="_blank">
-                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
-            </a>
+            <a href="https://twitter.com/share?url={{Request::url()}}&amp;text={{ $destinations[0]->location_name}}&amp;hashtags=simplesharebuttons" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
            
             <!-- Email -->
-            <a href="mailto:?Subject=Simple Share Buttons&amp;Body={{ $destinations[0]->location_name}}">
-                <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
-            </a>
+            <a href="mailto:?Subject=Simple Share Buttons&amp;Body={{ $destinations[0]->location_name}}"><img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" /></a>
             
         <figure>   
             <ul class="bxslider">
@@ -59,16 +51,21 @@
         
     </div>
     <div class="col-md-4 col-md-push-1 wow fadeInRight">
-        <h2 class="section-title">More Information</h2>
-        <div>How to Reach</div>
-        <a href="javascript:void(0);" class="boxed-link" style="background:none;">
-            
-            {{ $destinations[0]->how_to_reach }}
-        </a>
-        <div>When to Visit</div>
-        <a href="javascript:void(0);" class="boxed-link">
-            {{ $destinations[0]->when_to_visit }}
-        </a>
+        <h2 class="section-title"></h2>
+        <div>Plan Your Trip</div>
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+        </div>
+        
     </div>
 </div>
 

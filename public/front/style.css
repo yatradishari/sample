@@ -738,6 +738,9 @@ table {
   color: #818c8d;
   background: url(images/long-arrow.png) no-repeat 95% center;
 }
+.search_box{
+    float:right;
+}
 @media screen and (max-width: 480px) {
   .filter-links a {
     display: none;
@@ -778,6 +781,10 @@ table {
   overflow: hidden;
   margin-bottom: 20px;
 }
+.state-item{
+    border-radius: 20px;
+}
+
 .offer-item .featured-image img {
   width: 100%;
   max-width: 100%;

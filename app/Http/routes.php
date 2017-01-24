@@ -16,7 +16,9 @@ Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
 Route::controller('destinations', 'DestinationController');
 Route::controller('touroperators', 'OperatorController');
-Route::controller('holidayhomes', 'HolidayhomeController');
+//Route::get('holidayhomes/{state_id}', 'HolidayhomeController@index');
+Route::get('holidayhomes', 'HolidayhomeController@getIndex');
+Route::controller('holidayhomes/{state_id}', 'HolidayhomeController');
 Route::controller('contactus', 'ContactController');
 
 //Route::controllers([

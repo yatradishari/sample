@@ -31,7 +31,8 @@
 		<script src="{{ asset('/front/js/min/plugins-min.js') }}"></script>
 		<script src="{{ asset('/front/js/min/app-min.js') }}"></script>	
         
-        @yield('script')
+        @yield('script')        
+        
 	</head>
 
 	<body>		

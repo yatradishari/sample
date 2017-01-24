@@ -33,16 +33,42 @@ class HolidayhomeController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex()
-	{  
+	{ 
+        //if(!empty(Input::get('search')))
+        //{
+        //    $search = Input::get('search');
+        //}
       
         $holidayhomes=Holidayhome::where('visibility',1)						 
-							->where('deleted',0)		
-                            //->where('email','LIKE','%'.$email.'%')                            
-							->with('state_name')
-							->groupBy('state_id')
-                            ->paginate(env('PER_PAGE'));
-        $holidayhomes->setPath('holidayhomes');
-		return view('holidayhome.list', [ 'data' => $holidayhomes]);        
+                                ->where('deleted',0)		
+                               // ->where('state_id',$state_id)                                
+                                ->with('state_name')                              
+                                //->paginate(env('PER_PAGE'));
+                                ->get();
+       // $holidayhomes->setPath('holidayhomes');
+        return view('holidayhome.list', [ 'data' => $holidayhomes]);      
+        /*if($state_id>0)
+        {           
+            $holidayhomes=Holidayhome::where('visibility',1)						 
+                                ->where('deleted',0)		
+                                ->where('state_id',$state_id)                                
+                                ->with('state_name')                              
+                                ->paginate(env('PER_PAGE'));
+                 
+            $holidayhomes->setPath('holidayhomes');
+            return view('holidayhome.home_list', [ 'data' => $holidayhomes]);      
+        }
+        else
+        {
+            $holidayhomes=Holidayhome::where('visibility',1)						 
+                                ->where('deleted',0)       
+                                ->with('state_name')
+                                ->groupBy('state_id')
+                                ->paginate(env('PER_PAGE'));
+            $holidayhomes->setPath('holidayhomes');
+            return view('holidayhome.list', [ 'data' => $holidayhomes]);      
+        }*/
+          
 	}
     
     public function getDetails($id)

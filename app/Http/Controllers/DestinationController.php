@@ -2,6 +2,7 @@
 use App\Model\Destination;
 use App\Model\State;
 use App\Model\Destinationimage;
+use Input;
 class DestinationController extends Controller {
 
 	/*
@@ -32,14 +33,14 @@ class DestinationController extends Controller {
 	 */
 	public function getIndex()
 	{  
-       // $type = 0;
+        $search = '';
         //$email = '';
        // $status = '';
 
-       // if(!empty(Input::get('name')))
-       // {
-      //      $name = Input::get('name');
-       // }
+        if(!empty(Input::get('search')))
+        {
+            $search = Input::get('search');
+        }
        // if(!empty(Input::get('email')))
        // {
        //     $email = Input::get('email');
@@ -49,10 +50,10 @@ class DestinationController extends Controller {
        //     $status = Input::get('status');
        // }
             
-        //dd($type);
+       // dd($search);
         $destinations=Destination::where('visibility',1)						 
 							->where('deleted',0)		
-                            //->where('email','LIKE','%'.$email.'%')                            
+                            ->where('location_name','LIKE','%'.$search.'%')                            
 							->with('state_name','primary_image')	
 							->orderBy('location_name','ASC')
                             ->paginate(env('PER_PAGE'));

@@ -1,3 +1,9 @@
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
 DROP TABLE IF EXISTS `banners`;
 CREATE TABLE IF NOT EXISTS `banners` (
   `id` int(10) NOT NULL,
@@ -387,9 +393,9 @@ CREATE TABLE IF NOT EXISTS `holiday_home` (
 --
 
 INSERT INTO `holiday_home` (`id`, `state_id`, `location_id`, `title`, `address`, `description`, `tariff`, `phone`, `how_to_book`, `visibility`, `deleted`, `created_at`, `updated_at`) VALUES
-(1, 1, 5, 'ddddd', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 35, 7, 'ddddd55', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 1, 3, 'fghfgh', '', '', '', '', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 1, 5, 'ddddd', 'ddd', 'des', '100', '9874563210', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 35, 7, 'ddddd55', 'aaa', 'des2', '200', '9874563211', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 1, 3, 'fghfgh', 'ccc', 'des3', '300', '9874563212', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -474,6 +480,7 @@ CREATE TABLE IF NOT EXISTS `state` (
   `id` int(10) unsigned NOT NULL,
   `country_id` int(10) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
 
@@ -481,42 +488,42 @@ CREATE TABLE IF NOT EXISTS `state` (
 -- Dumping data for table `state`
 --
 
-INSERT INTO `state` (`id`, `country_id`, `name`, `status`) VALUES
-(1, 99, 'ANDAMAN AND NICOBAR ISLANDS', 1),
-(2, 99, 'ANDHRA PRADESH', 1),
-(3, 99, 'ARUNACHAL PRADESH', 1),
-(4, 99, 'ASSAM', 1),
-(5, 99, 'BIHAR', 1),
-(6, 99, 'CHATTISGARH', 1),
-(7, 99, 'CHANDIGARH', 1),
-(8, 99, 'DAMAN AND DIU', 1),
-(9, 99, 'DELHI', 1),
-(10, 99, 'DADRA AND NAGAR HAVELI', 1),
-(11, 99, 'GOA', 1),
-(12, 99, 'GUJARAT', 1),
-(13, 99, 'HIMACHAL PRADESH', 1),
-(14, 99, 'HARYANA', 1),
-(15, 99, 'JAMMU AND KASHMIR', 1),
-(16, 99, 'JHARKHAND', 1),
-(17, 99, 'KERALA', 1),
-(18, 99, 'KARNATAKA', 1),
-(19, 99, 'LAKSHADWEEP', 1),
-(20, 99, 'MEGHALAYA', 1),
-(21, 99, 'MAHARASHTRA', 1),
-(22, 99, 'MANIPUR', 1),
-(23, 99, 'MADHYA PRADESH', 1),
-(24, 99, 'MIZORAM', 1),
-(25, 99, 'NAGALAND', 1),
-(26, 99, 'ORISSA', 1),
-(27, 99, 'PUNJAB', 1),
-(28, 99, 'PONDICHERRY', 1),
-(29, 99, 'RAJASTHAN', 1),
-(30, 99, 'SIKKIM', 1),
-(31, 99, 'TAMIL NADU', 1),
-(32, 99, 'TRIPURA', 1),
-(33, 99, 'UTTARAKHAND', 1),
-(34, 99, 'UTTAR PRADESH', 1),
-(35, 99, 'WEST BENGAL', 1);
+INSERT INTO `state` (`id`, `country_id`, `name`, `image`, `status`) VALUES
+(1, 99, 'ANDAMAN AND NICOBAR ISLANDS', '4.jpg', 1),
+(2, 99, 'ANDHRA PRADESH', '', 1),
+(3, 99, 'ARUNACHAL PRADESH', '', 1),
+(4, 99, 'ASSAM', '', 1),
+(5, 99, 'BIHAR', '', 1),
+(6, 99, 'CHATTISGARH', '', 1),
+(7, 99, 'CHANDIGARH', '', 1),
+(8, 99, 'DAMAN AND DIU', '', 1),
+(9, 99, 'DELHI', '', 1),
+(10, 99, 'DADRA AND NAGAR HAVELI', '', 1),
+(11, 99, 'GOA', '', 1),
+(12, 99, 'GUJARAT', '', 1),
+(13, 99, 'HIMACHAL PRADESH', '', 1),
+(14, 99, 'HARYANA', '', 1),
+(15, 99, 'JAMMU AND KASHMIR', '', 1),
+(16, 99, 'JHARKHAND', '', 1),
+(17, 99, 'KERALA', '', 1),
+(18, 99, 'KARNATAKA', '', 1),
+(19, 99, 'LAKSHADWEEP', '', 1),
+(20, 99, 'MEGHALAYA', '', 1),
+(21, 99, 'MAHARASHTRA', '', 1),
+(22, 99, 'MANIPUR', '', 1),
+(23, 99, 'MADHYA PRADESH', '', 1),
+(24, 99, 'MIZORAM', '', 1),
+(25, 99, 'NAGALAND', '', 1),
+(26, 99, 'ORISSA', '', 1),
+(27, 99, 'PUNJAB', '', 1),
+(28, 99, 'PONDICHERRY', '', 1),
+(29, 99, 'RAJASTHAN', '', 1),
+(30, 99, 'SIKKIM', '', 1),
+(31, 99, 'TAMIL NADU', '', 1),
+(32, 99, 'TRIPURA', '', 1),
+(33, 99, 'UTTARAKHAND', '', 1),
+(34, 99, 'UTTAR PRADESH', '', 1),
+(35, 99, 'WEST BENGAL', '4.jpg', 1);
 
 -- --------------------------------------------------------
 
