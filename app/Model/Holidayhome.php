@@ -19,6 +19,11 @@ class Holidayhome extends Model  {
 	{
 	  return $this->hasOne('App\Model\State', 'id', 'state_id');
 	}
+    
+    public function location_name()
+	{
+	  return $this->hasOne('App\Model\Destination', 'id', 'location_id');
+	}
 	
 	//public function primary_image()
 	//{

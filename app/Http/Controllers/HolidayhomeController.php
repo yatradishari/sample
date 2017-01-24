@@ -32,22 +32,22 @@ class HolidayhomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getIndex()
+	public function getIndex($state_id=0)
 	{ 
         //if(!empty(Input::get('search')))
         //{
         //    $search = Input::get('search');
         //}
       
-        $holidayhomes=Holidayhome::where('visibility',1)						 
+        /*$holidayhomes=Holidayhome::where('visibility',1)						 
                                 ->where('deleted',0)		
                                // ->where('state_id',$state_id)                                
                                 ->with('state_name')                              
                                 //->paginate(env('PER_PAGE'));
-                                ->get();
+                                ->get();*/
        // $holidayhomes->setPath('holidayhomes');
-        return view('holidayhome.list', [ 'data' => $holidayhomes]);      
-        /*if($state_id>0)
+       // return view('holidayhome.list', [ 'data' => $holidayhomes]);      
+        if($state_id>0)
         {           
             $holidayhomes=Holidayhome::where('visibility',1)						 
                                 ->where('deleted',0)		
@@ -67,7 +67,7 @@ class HolidayhomeController extends Controller {
                                 ->paginate(env('PER_PAGE'));
             $holidayhomes->setPath('holidayhomes');
             return view('holidayhome.list', [ 'data' => $holidayhomes]);      
-        }*/
+        }
           
 	}
     

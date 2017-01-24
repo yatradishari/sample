@@ -741,6 +741,9 @@ table {
 .search_box{
     float:right;
 }
+.radius-20{
+    border-radius:20px !important;
+}
 @media screen and (max-width: 480px) {
   .filter-links a {
     display: none;
