@@ -35,12 +35,17 @@ use App\Model\Country;
        //dd($state->name);
         if($include=="all")
         {
-            $create_html='<small><i class="fa fa-map-marker"></i> '.$state->name.' ,'.$country->name.'</small>';
+            $create_html='<small><i class="fa fa-map-marker color-red fa-2x"></i> '.$state->name.' ,'.$country->name.'</small>';
         }
         else
         {
-            $create_html='<small><i class="fa fa-map-marker"></i> '.$destination->location_name.', '.$state->name.', '.$country->name.'</small>';
+            $create_html='<small><i class="fa fa-map-marker color-red fa-2x"></i> '.$destination->location_name.', '.$state->name.', '.$country->name.'</small>';
         }
         return $create_html;
+    }
+    
+    function make_meta_tag($string)
+    {
+       dd($string);
     }
 	?>

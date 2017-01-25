@@ -744,6 +744,9 @@ table {
 .radius-20{
     border-radius:20px !important;
 }
+.color-red{
+    color:#bd360c;
+}
 @media screen and (max-width: 480px) {
   .filter-links a {
     display: none;

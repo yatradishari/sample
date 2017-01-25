@@ -61,15 +61,16 @@ class DestinationController extends Controller {
 		return view('destination.list', [ 'data' => $destinations]);        
 	}
     
-    public function getDetails($id)
+    public function getDetails($title_meta_tag)
 	{  
         $destinations=Destination::where('visibility',1)						 
 							->where('deleted',0)
-							->where('id',$id)
+							->where('title_meta_tag',$title_meta_tag)
 							->with('state_name','primary_image')								
 							->get();	
-							
-		$destinationimage=Destinationimage::where('destination_id',$id)
+			
+
+		$destinationimage=Destinationimage::where('destination_id',$destinations[0]->id)
 							->where('status',1)
 							->where('deleted',0)
 							->orderBy('id','DESC')
@@ -77,6 +78,30 @@ class DestinationController extends Controller {
         
             
 		return view('destination.details', [ 'destinations' => $destinations, 'destinationimage' => $destinationimage]);
+	}
+    
+    public function getPopular()
+	{  
+        $destinations=Destination::where('visibility',1)						 
+							->where('deleted',0)		
+                            ->where('type',2)                            
+							->with('state_name','primary_image')	
+							->orderBy('location_name','ASC')
+                            ->paginate(env('PER_PAGE'));
+        $destinations->setPath('popular');
+		return view('destination.list', [ 'data' => $destinations]);      
+	}
+    
+    public function getOffbeat()
+	{  
+        $destinations=Destination::where('visibility',1)						 
+							->where('deleted',0)		
+                            ->where('type',1)                            
+							->with('state_name','primary_image')	
+							->orderBy('location_name','ASC')
+                            ->paginate(env('PER_PAGE'));
+        $destinations->setPath('offbeat');
+		return view('destination.list', [ 'data' => $destinations]);      
 	}
 
 }

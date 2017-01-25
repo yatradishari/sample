@@ -15,7 +15,7 @@
                     <ul class="list-arrow">                        
                         <li><a href="{{ url('/destinations/popular') }}">Popular Destinations</a></li>
                         <li><a href="{{ url('/destinations/offbeat') }}">Offbeat Destinations</a></li>                        
-                        <li><a href="javascript:void(0);">Holiday Home</a></li>                        
+                        <li><a href="{{ url('/holidayhomes') }}">Holiday Home</a></li>                        
                     </ul>
                 </div>
             </div>

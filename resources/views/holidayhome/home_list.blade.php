@@ -8,7 +8,7 @@
             <table id="example" class="display" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>State</th>
+                       
                         <th>Location</th>                        
                         <th>Address</th>                        
                         <th>Room Tariff</th>
@@ -19,7 +19,7 @@
                 <tbody>
                     @foreach($data as $holidayhome)
                     <tr>
-                        <td>{{ $holidayhome->state_name->name }}</td>
+                       
                         <td>{{ $holidayhome->location_name->location_name }}</td>                        
                         <td>{{ $holidayhome->address}}</td>                        
                         <td>{{ $holidayhome->tariff}}</td>

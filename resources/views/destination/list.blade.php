@@ -24,7 +24,7 @@
                     @endif
                     
                 </figure>
-                <h2 class="entry-title"><a href="{{ url('/destinations/details/'.$destination->id) }}">{{ $destination->location_name}}</a></h2>
+                <h2 class="entry-title"><a href="{{ url('/destinations/details/'.$destination->title_meta_tag) }}">{{ $destination->location_name}}</a></h2>
                 <p>{{ short($destination->description ) }}</p>
                 <div class="price"> 
                     {!! get_location($destination->id) !!}
