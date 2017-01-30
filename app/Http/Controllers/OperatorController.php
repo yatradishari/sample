@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
-
+use App\Model\State;
+use App\Model\Operator;
 class OperatorController extends Controller {
 
 	/*
@@ -29,8 +30,12 @@ class OperatorController extends Controller {
 	 * @return Response
 	 */
 	public function getIndex()
-	{        
-		return view('operator.list');
+	{ 
+        $operator=Operator::where('display',1)
+                  ->orderBy('member_type','DESC')
+                  ->orderBy('agent_name','ASC')
+                  ->get();
+		return view('operator.list', [ 'data' => $operator]);
 	}
 
 }

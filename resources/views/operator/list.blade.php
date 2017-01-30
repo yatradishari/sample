@@ -3,66 +3,230 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8 wow fadeInLeft">
-            <h2 class="section-title">Content Coming Soon</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum sit amet magna ac bibendum. Cras sit amet maximus neque, sed gravida arcu. Morbi enim quam, eleifend sit amet neque iaculis, ullamcorper fermentum eros. Sed suscipit dolor felis, et congue nulla porta non. Cras tristique sodales ante, at cursus sem finibus sit amet. Quisque id nulla nibh. Phasellus mollis pretium placerat. Suspendisse in ante tellus.</p> 
-
-            <p>Phasellus porta non lorem et blandit. Quisque egestas lacus quis justo dictum dictum. Cras ut dapibus quam. Nullam vel ligula lacus. Phasellus pretium non nisl ut sagittis. Nulla egestas ante euismod, efficitur arcu ac, commodo ex. Sed vitae fermentum lacus. In augue massa, pellentesque et mauris vel, iaculis scelerisque nulla. Curabitur rutrum condimentum porttitor. Ut finibus cursus sodales. Donec scelerisque eget ipsum.</p>
-
-            <p>Sed efficitur nunc non efficitur convallis. Proin placerat condimentum nulla feugiat pellentesque phasellus ex urna, vestibulum in congue eget, commodo quis nulla. Sed eleifend euismod urna, eget eleifend neque. Integer ultricies efficitur est. Aenean vitae quam et est pharetra eleifend vel in magna. Praesent fermentum nulla vitae enim aliquam venenatis. Vestibulum lacinia, lacus eget tincidunt ultrices, sapien quam tristique eros, eu iaculis sem tortor rutrum orci. Proin aliquam ipsum non tempus consectetur  hac habitasse platea.</p>
-
-            <div class="row">
-                <div class="col-md-3 col-xs-6">
-                    <h4>Ultrices fementum</h4>
-                    <ul class="list-arrow">
-                        <li>Cras tristique sodales</li>
-                        <li>Cursus sem finibus</li>
-                        <li>Qesnique autumm</li>
-                        <li>Ambregedul Amesyu</li>
-                        <li>Bahreway bahreway</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <h4>Ultrices fementum</h4>
-                    <ul class="list-arrow">
-                        <li>Cras tristique sodales</li>
-                        <li>Cursus sem finibus</li>
-                        <li>Qesnique autumm</li>
-                        <li>Ambregedul Amesyu</li>
-                        <li>Bahreway bahreway</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <h4>Ultrices fementum</h4>
-                    <ul class="list-arrow">
-                        <li>Cras tristique sodales</li>
-                        <li>Cursus sem finibus</li>
-                        <li>Qesnique autumm</li>
-                        <li>Ambregedul Amesyu</li>
-                        <li>Bahreway bahreway</li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <h4>Ultrices fementum</h4>
-                    <ul class="list-arrow">
-                        <li>Cras tristique sodales</li>
-                        <li>Cursus sem finibus</li>
-                        <li>Qesnique autumm</li>
-                        <li>Ambregedul Amesyu</li>
-                        <li>Bahreway bahreway</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-md-push-1 wow fadeInRight">
-            <h2 class="section-title">Categories</h2>
-            <ul class="list-arrow alt">
-                <li><a href="#">Cras tristique sodales</a></li>
-                <li><a href="#">Cursus sem finibus</a></li>
-                <li><a href="#">Qesnique autuminum</a></li>
-                <li><a href="#">Ambregedul Amesyu</a></li>
-                <li><a href="#">Bahreway bahreway</a></li>
+        <div class="col-md-12 wow fadeInLeft">
+            <ul class="event-list">
+                @foreach($data as $operator)
+                <li>
+                    <!-- <time datetime="2014-07-20">
+                        <span class="day">4</span>
+                        <span class="month">Jul</span>
+                        <span class="year">2014</span>
+                        <span class="time">ALL DAY</span>
+                    </time>-->
+                    <img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+                    <div class="info">
+                        <h2 class="title">{{$operator->agent_name}} </h2>
+                        <p class="desc">
+                            {!! get_state($operator->state_id,'all','x') !!}    
+                        </p>
+                        <p class="desc">{!! short($operator->description,200)!!}</p>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
+                            <li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                            <li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                @endforeach
+                
             </ul>
         </div>
+       
     </div>
+
 @endsection
+@section('script')
+<style>
+    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+   
+    
+    .event-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.event-list > li {
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.event-list > li > time {
+		display: inline-block;
+		width: 100%;
+		color: rgb(255, 255, 255);
+		background-color: rgb(197, 44, 102);
+		padding: 5px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.event-list > li:nth-child(even) > time {
+		background-color: rgb(165, 82, 167);
+	}
+	.event-list > li > time > span {
+		display: none;
+	}
+	.event-list > li > time > .day {
+		display: block;
+		font-size: 56pt;
+		font-weight: 100;
+		line-height: 1;
+	}
+	.event-list > li time > .month {
+		display: block;
+		font-size: 24pt;
+		font-weight: 900;
+		line-height: 1;
+	}
+	.event-list > li > img {
+		width: 100%;
+	}
+	.event-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.event-list > li > .info > .title {
+		font-size: 17pt;
+		font-weight: 700;
+		margin: 0px;
+	}
+	.event-list > li > .info > .desc {
+		font-size: 13pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.event-list > li > .info > ul,
+	.event-list > li > .social > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.event-list > li > .social > ul {
+		margin: 0px;
+	}
+	.event-list > li > .info > ul > li,
+	.event-list > li > .social > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .event-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	} 
+    .event-list > li > .social > ul > li {    
+        padding: 0px;
+    }
+    .event-list > li > .social > ul > li > a {
+        padding: 3px 0px;
+	} 
+	.event-list > li > .info > ul > li:hover,
+	.event-list > li > .social > ul > li:hover {
+		color: rgb(30, 30, 30);
+		background-color: rgb(200, 200, 200);
+	}
+	.facebook a,
+	.twitter a,
+	.google-plus a {
+		display: block;
+		width: 100%;
+		color: rgb(75, 110, 168) !important;
+	}
+	.twitter a {
+		color: rgb(79, 213, 248) !important;
+	}
+	.google-plus a {
+		color: rgb(221, 75, 57) !important;
+	}
+	.facebook:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(75, 110, 168) !important;
+	}
+	.twitter:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(79, 213, 248) !important;
+	}
+	.google-plus:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(221, 75, 57) !important;
+	}
+
+	@media (min-width: 768px) {
+		.event-list > li {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 120px;
+			padding: 0px;
+		}
+		.event-list > li > time,
+		.event-list > li > img  {
+			display: inline-block;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			float: left;
+		}
+		.event-list > li > .info {
+			background-color: rgb(245, 245, 245);
+			overflow: hidden;
+		}
+		.event-list > li > time,
+		.event-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.event-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			padding-right: 40px;
+		}	
+		.event-list > li > .info > .title, 
+		.event-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.event-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.event-list > li > .social {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .event-list > li > .social > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.event-list > li > .social > ul > li {			
+			display: block;
+            padding: 0px;
+		}
+		.event-list > li > .social > ul > li > a {
+			display: block;
+			width: 40px;
+			/*padding: 10px 0px 9px;*/
+		}
+	}
+    </style>
+@endsection
+

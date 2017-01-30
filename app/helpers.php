@@ -27,7 +27,7 @@ use App\Model\Country;
 		
 	}
     
-    function get_location($destination_id,$include="all")
+    function get_location($destination_id,$include="all",$marker_size="2x")
     {
         $destination=Destination::find($destination_id);
         $state=State::find($destination->state_id);
@@ -35,12 +35,23 @@ use App\Model\Country;
        //dd($state->name);
         if($include=="all")
         {
-            $create_html='<small><i class="fa fa-map-marker color-red fa-2x"></i> '.$state->name.' ,'.$country->name.'</small>';
+            $create_html='<small><i class="fa fa-map-marker color-red fa-'.$marker_size.'"></i> '.ucwords(strtolower($state->name)).' ,'.ucwords(strtolower($country->name)).'</small>';
         }
         else
         {
-            $create_html='<small><i class="fa fa-map-marker color-red fa-2x"></i> '.$destination->location_name.', '.$state->name.', '.$country->name.'</small>';
+            $create_html='<small><i class="fa fa-map-marker color-red fa-'.$marker_size.'"></i> '.ucwords(strtolower($destination->location_name)).', '.ucwords(strtolower($state->name)).', '.ucwords(strtolower($country->name)).'</small>';
         }
+        return $create_html;
+    }
+    
+    function get_state($state_id,$marker_size="2x")
+    {
+        $state=State::find($state_id);        
+        
+        $country=Country::find($state->country_id);
+       
+        $create_html='<small><i class="fa fa-map-marker color-red fa-'.$marker_size.'"></i> '.ucwords(strtolower($state->name)).' ,'.ucwords(strtolower($country->name)).'</small>';
+       
         return $create_html;
     }
     

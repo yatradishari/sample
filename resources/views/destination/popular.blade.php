@@ -14,7 +14,7 @@
                     </figure>
                     <h2 class="entry-title"><a href="">{{ $destination->location_name}}</a></h2>
                     <p>{{ short($destination->description ) }}</p>
-                    <a href="{{ url('/destinations/details/'.$destination->id) }}" class="button">See details</a>
+                    <a href="{{ url('/destinations/details/'.$destination->title_meta_tag) }}" class="button">See details</a>
                 </article>
             </div>
             @endforeach  
