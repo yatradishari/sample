@@ -300,6 +300,7 @@ CREATE TABLE IF NOT EXISTS `destinations` (
   `id` bigint(30) NOT NULL,
   `state_id` int(10) NOT NULL,
   `location_name` text NOT NULL,
+  `title_meta_tag` text NOT NULL,
   `primary_image_id` bigint(30) NOT NULL,
   `description` longtext NOT NULL,
   `how_to_reach` longtext NOT NULL,
@@ -317,18 +318,18 @@ CREATE TABLE IF NOT EXISTS `destinations` (
 -- Dumping data for table `destinations`
 --
 
-INSERT INTO `destinations` (`id`, `state_id`, `location_name`, `primary_image_id`, `description`, `how_to_reach`, `when_to_visit`, `status`, `visibility`, `deleted`, `type`, `added_by`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Offbeat 1', 0, 'This is a demo description for destination 1', 'Demo station 1', 'Any season 1', 1, 1, 0, 1, 0, '0000-00-00 00:00:00', '2016-08-04 19:16:13'),
-(2, 1, 'Popular 1', 0, 'This is a demo description for destination 2', 'Demo station 2', 'Any season 2', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-04 19:18:46'),
-(3, 1, 'Popular 2', 16, 'This is a demo description for destination 3', 'Demo station 3', 'Any season 3', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-11 03:04:05'),
-(4, 1, 'Popular 3', 14, 'This is a demo description for destination 4', 'Demo station 4', 'Any season 4', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-11 03:03:41'),
-(5, 1, 'Offbeat 2', 15, 'This is a demo description for destination 5', 'Ranthambore National Park is around 11kms from Sawai Madhopur. It is well connected via rail and roadways. The nearest airport is 160 km away, the Jaipur International Airport. Ranthambore is connected by road to cities like Jaipur (160km), Delhi (220 km), Agra (300 km), etc. ', ' The onset of summers and the unbearable scorching sun leaves the summer months a less preferred time to visit Rajasthan. However, if you can bear with the rising mercury, the month of May is perfect for you to visit Ranthambore as this is the best time to spot tigers. Do not forget sunscreens, scarves and full-sleeve cotton outfits to avoid heat strokes. ', 1, 1, 0, 1, 0, '0000-00-00 00:00:00', '2016-08-11 03:03:53'),
-(6, 35, 'Offbeat 3', 9, '\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium rhoncus suscipit. Proin nulla sapien, consequat id pharetra a, elementum ut dui. Curabitur vel dui quis est luctus posuere. Morbi eget dictum ex. Vestibulum mollis enim quis felis volutpat, sit amet vulputate risus vulputate. Etiam maximus est vel turpis placerat, nec sodales sem posuere. Vestibulum congue pharetra efficitur. Duis ac nisl aliquam, varius mi eu, rutrum nulla. Fusce dolor magna, aliquam at erat quis, sollicitudin pulvinar ante. Aliquam commodo nunc nunc, vel consectetur eros sollicitudin non. Vestibulum volutpat ex congue, bibendum tortor nec, dictum nibh.\n\nAenean tempus laoreet auctor. Sed imperdiet vehicula purus posuere feugiat. Etiam lectus massa, rhoncus sit amet gravida nec, fermentum in tellus. Nullam mollis massa sodales felis vulputate, et faucibus nulla hendrerit. Suspendisse tempus ante mauris, vel cursus libero accumsan in. Pellentesque risus dolor, varius non placerat ac, sagittis ut urna. Nullam porttitor consectetur dolor sed lobortis. Morbi lacinia, dolor quis facilisis hendrerit, magna velit semper dui, vel facilisis diam sem sit amet mauris.\n\nUt nec dolor orci. Cras sit amet ante et lectus consectetur molestie elementum sed quam. Curabitur mi dolor, semper non felis non, facilisis feugiat orci. Nulla a suscipit arcu. Fusce vitae semper justo. Aliquam quis urna bibendum, molestie elit id, interdum orci. Aenean sit amet mi egestas, iaculis est vel, ullamcorper tellus. Aenean vulputate lobortis consectetur.\n\nUt non quam cursus, facilisis erat nec, malesuada leo. Aliquam erat volutpat. Vestibulum ultricies nisl id lectus condimentum, sed tristique erat lacinia. Duis dignissim justo pellentesque elit sodales placerat nec sit amet dui. Cras tincidunt eu arcu eu sagittis. Aenean eget justo pretium, consectetur massa eget, ornare velit. In rutrum dolor accumsan tellus efficitur ultricies.\n\nNulla eros ex, blandit vel porttitor sit amet, varius nec urna. Vestibulum vel pharetra sapien. Praesent et dapibus turpis, a euismod justo. Phasellus pretium sollicitudin aliquam. Nam sollicitudin sem quis felis tempus rutrum. Vivamus ut vestibulum felis, sed vestibulum magna. Vestibulum id libero vel nibh gravida volutpat et ut nisi. In massa ipsum, tempus id ultrices id, tristique et libero. Nulla scelerisque accumsan nibh eget venenatis. Pellentesque sollicitudin a risus eget aliquam. Aliquam et leo eu diam volutpat gravida id vitae urna. In faucibus porta ornare. ', 'Demo station 6', 'Any season 6', 1, 1, 0, 1, 0, '2016-08-04 17:07:34', '2016-08-11 03:02:41'),
-(7, 35, 'Offbeat 4', 8, 'This is a demo description for destination 7', 'Demo station 7', 'Any season 7', 1, 1, 0, 1, 0, '2016-08-04 17:08:28', '2016-08-11 03:04:17'),
-(8, 35, 'Popular 4', 0, 'This is a demo description for destination 8', 'Demo station 8', 'Any season 8', 1, 1, 0, 2, 0, '2016-08-04 17:08:35', '2016-08-11 03:04:11'),
-(9, 35, 'Offbeat 5', 12, 'This is a demo description for destination 9', 'Demo station 9', 'Any season 9', 1, 1, 0, 1, 0, '2016-08-04 17:09:00', '2016-08-11 03:03:18'),
-(10, 35, 'Offbeat 6', 4, 'This is a demo description for destination 10', 'Demo station 10', 'Any season 10', 1, 1, 0, 1, 0, '2016-08-04 17:09:14', '2016-08-11 03:04:21'),
-(11, 18, 'Offbeat 7', 0, 'This is a demo description for destination 11', 'Demo station 11', 'Any season 11', 1, 1, 0, 1, 0, '2017-01-12 08:40:42', '2017-01-12 08:40:42');
+INSERT INTO `destinations` (`id`, `state_id`, `location_name`, `title_meta_tag`, `primary_image_id`, `description`, `how_to_reach`, `when_to_visit`, `status`, `visibility`, `deleted`, `type`, `added_by`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Offbeat 1', 'offbeat-1', 0, 'This is a demo description for destination 1', 'Demo station 1', 'Any season 1', 1, 1, 0, 1, 0, '0000-00-00 00:00:00', '2016-08-04 19:16:13'),
+(2, 1, 'Popular 1', 'popular-1', 0, 'This is a demo description for destination 2', 'Demo station 2', 'Any season 2', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-04 19:18:46'),
+(3, 1, 'Popular 2', 'popular-2', 16, 'This is a demo description for destination 3', 'Demo station 3', 'Any season 3', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-11 03:04:05'),
+(4, 1, 'Popular 3', 'popular-3', 14, 'This is a demo description for destination 4', 'Demo station 4', 'Any season 4', 1, 1, 0, 2, 0, '0000-00-00 00:00:00', '2016-08-11 03:03:41'),
+(5, 1, 'Offbeat 2', 'offbeat-2', 15, 'This is a demo description for destination 5', 'Ranthambore National Park is around 11kms from Sawai Madhopur. It is well connected via rail and roadways. The nearest airport is 160 km away, the Jaipur International Airport. Ranthambore is connected by road to cities like Jaipur (160km), Delhi (220 km), Agra (300 km), etc. ', ' The onset of summers and the unbearable scorching sun leaves the summer months a less preferred time to visit Rajasthan. However, if you can bear with the rising mercury, the month of May is perfect for you to visit Ranthambore as this is the best time to spot tigers. Do not forget sunscreens, scarves and full-sleeve cotton outfits to avoid heat strokes. ', 1, 1, 0, 1, 0, '0000-00-00 00:00:00', '2016-08-11 03:03:53'),
+(6, 35, 'Offbeat 3', 'offbeat-3', 9, '\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium rhoncus suscipit. Proin nulla sapien, consequat id pharetra a, elementum ut dui. Curabitur vel dui quis est luctus posuere. Morbi eget dictum ex. Vestibulum mollis enim quis felis volutpat, sit amet vulputate risus vulputate. Etiam maximus est vel turpis placerat, nec sodales sem posuere. Vestibulum congue pharetra efficitur. Duis ac nisl aliquam, varius mi eu, rutrum nulla. Fusce dolor magna, aliquam at erat quis, sollicitudin pulvinar ante. Aliquam commodo nunc nunc, vel consectetur eros sollicitudin non. Vestibulum volutpat ex congue, bibendum tortor nec, dictum nibh.\n\nAenean tempus laoreet auctor. Sed imperdiet vehicula purus posuere feugiat. Etiam lectus massa, rhoncus sit amet gravida nec, fermentum in tellus. Nullam mollis massa sodales felis vulputate, et faucibus nulla hendrerit. Suspendisse tempus ante mauris, vel cursus libero accumsan in. Pellentesque risus dolor, varius non placerat ac, sagittis ut urna. Nullam porttitor consectetur dolor sed lobortis. Morbi lacinia, dolor quis facilisis hendrerit, magna velit semper dui, vel facilisis diam sem sit amet mauris.\n\nUt nec dolor orci. Cras sit amet ante et lectus consectetur molestie elementum sed quam. Curabitur mi dolor, semper non felis non, facilisis feugiat orci. Nulla a suscipit arcu. Fusce vitae semper justo. Aliquam quis urna bibendum, molestie elit id, interdum orci. Aenean sit amet mi egestas, iaculis est vel, ullamcorper tellus. Aenean vulputate lobortis consectetur.\n\nUt non quam cursus, facilisis erat nec, malesuada leo. Aliquam erat volutpat. Vestibulum ultricies nisl id lectus condimentum, sed tristique erat lacinia. Duis dignissim justo pellentesque elit sodales placerat nec sit amet dui. Cras tincidunt eu arcu eu sagittis. Aenean eget justo pretium, consectetur massa eget, ornare velit. In rutrum dolor accumsan tellus efficitur ultricies.\n\nNulla eros ex, blandit vel porttitor sit amet, varius nec urna. Vestibulum vel pharetra sapien. Praesent et dapibus turpis, a euismod justo. Phasellus pretium sollicitudin aliquam. Nam sollicitudin sem quis felis tempus rutrum. Vivamus ut vestibulum felis, sed vestibulum magna. Vestibulum id libero vel nibh gravida volutpat et ut nisi. In massa ipsum, tempus id ultrices id, tristique et libero. Nulla scelerisque accumsan nibh eget venenatis. Pellentesque sollicitudin a risus eget aliquam. Aliquam et leo eu diam volutpat gravida id vitae urna. In faucibus porta ornare. ', 'Demo station 6', 'Any season 6', 1, 1, 0, 1, 0, '2016-08-04 17:07:34', '2016-08-11 03:02:41'),
+(7, 35, 'This is a test title', 'this-is-a-test-title', 8, 'This is a demo description for destination 7', 'Demo station 7', 'Any season 7', 1, 1, 0, 1, 0, '2016-08-04 17:08:28', '2016-08-11 03:04:17'),
+(8, 35, 'Popular 4', 'popular-4', 0, 'This is a demo description for destination 8', 'Demo station 8', 'Any season 8', 1, 1, 0, 2, 0, '2016-08-04 17:08:35', '2016-08-11 03:04:11'),
+(9, 35, 'Offbeat 5', 'offbeat-5', 12, 'This is a demo description for destination 9', 'Demo station 9', 'Any season 9', 1, 1, 0, 1, 0, '2016-08-04 17:09:00', '2016-08-11 03:03:18'),
+(10, 35, 'Offbeat 6', 'offbeat-6', 4, 'This is a demo description for destination 10', 'Demo station 10', 'Any season 10', 1, 1, 0, 1, 0, '2016-08-04 17:09:14', '2016-08-11 03:04:21'),
+(11, 18, 'Offbeat 7', 'offbeat-7', 0, 'This is a demo description for destination 11', 'Demo station 11', 'Any season 11', 1, 1, 0, 1, 0, '2017-01-12 08:40:42', '2017-01-12 08:40:42');
 
 -- --------------------------------------------------------
 
@@ -386,7 +387,7 @@ CREATE TABLE IF NOT EXISTS `holiday_home` (
   `deleted` tinyint(2) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `holiday_home`
@@ -395,7 +396,8 @@ CREATE TABLE IF NOT EXISTS `holiday_home` (
 INSERT INTO `holiday_home` (`id`, `state_id`, `location_id`, `title`, `address`, `description`, `tariff`, `phone`, `how_to_book`, `visibility`, `deleted`, `created_at`, `updated_at`) VALUES
 (1, 1, 5, 'ddddd', 'ddd', 'des', '100', '9874563210', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 35, 7, 'ddddd55', 'aaa', 'des2', '200', '9874563211', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 1, 3, 'fghfgh', 'ccc', 'des3', '300', '9874563212', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(3, 1, 3, 'fghfgh', 'ccc', 'des3', '300', '9874563212', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 5, 9, 'new', 'ccc', 'des3', '300', '9874563212', '', 1, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -420,6 +422,33 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `operator_service`
+--
+
+DROP TABLE IF EXISTS `operator_service`;
+CREATE TABLE IF NOT EXISTS `operator_service` (
+  `id` bigint(30) NOT NULL,
+  `operator_id` bigint(30) NOT NULL,
+  `service_id` bigint(30) NOT NULL,
+  `visibility` tinyint(2) NOT NULL DEFAULT '1',
+  `status` tinyint(2) NOT NULL DEFAULT '1',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `operator_service`
+--
+
+INSERT INTO `operator_service` (`id`, `operator_id`, `service_id`, `visibility`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, 1, 1, '2016-11-10 16:10:00', '2016-11-10 16:10:00'),
+(2, 1, 2, 1, 1, '2016-11-10 16:10:00', '2016-11-10 16:10:00'),
+(3, 2, 1, 1, 1, '2016-11-10 16:10:00', '2016-11-10 16:10:00'),
+(4, 4, 3, 1, 1, '2016-11-10 16:10:00', '2016-11-10 16:10:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `password_resets`
 --
 
@@ -429,6 +458,30 @@ CREATE TABLE IF NOT EXISTS `password_resets` (
   `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service_offer`
+--
+
+DROP TABLE IF EXISTS `service_offer`;
+CREATE TABLE IF NOT EXISTS `service_offer` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `visibility` tinyint(2) NOT NULL DEFAULT '1',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `service_offer`
+--
+
+INSERT INTO `service_offer` (`id`, `name`, `visibility`, `created_at`, `updated_at`) VALUES
+(1, 'Hotel Booking', 1, '2017-01-30 07:07:22', '2017-01-30 07:07:22'),
+(2, 'Railway Ticket Booking', 1, '2017-01-30 07:07:22', '2017-01-30 07:07:22'),
+(3, 'Flight Ticket Booking', 1, '2017-01-30 07:07:22', '2017-01-30 07:07:22');
 
 -- --------------------------------------------------------
 
@@ -493,7 +546,7 @@ INSERT INTO `state` (`id`, `country_id`, `name`, `image`, `status`) VALUES
 (2, 99, 'ANDHRA PRADESH', '', 1),
 (3, 99, 'ARUNACHAL PRADESH', '', 1),
 (4, 99, 'ASSAM', '', 1),
-(5, 99, 'BIHAR', '', 1),
+(5, 99, 'BIHAR', '4.jpg', 1),
 (6, 99, 'CHATTISGARH', '', 1),
 (7, 99, 'CHANDIGARH', '', 1),
 (8, 99, 'DAMAN AND DIU', '', 1),
@@ -528,6 +581,44 @@ INSERT INTO `state` (`id`, `country_id`, `name`, `image`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tour_operator`
+--
+
+DROP TABLE IF EXISTS `tour_operator`;
+CREATE TABLE IF NOT EXISTS `tour_operator` (
+  `id` bigint(20) NOT NULL,
+  `agent_name` text NOT NULL,
+  `logo` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `address_line_one` varchar(255) NOT NULL,
+  `address_line_two` varchar(255) NOT NULL,
+  `city` varchar(255) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `postal_code` varchar(50) NOT NULL,
+  `landline` varchar(50) NOT NULL,
+  `mobile1` varchar(50) NOT NULL,
+  `mobile2` varchar(50) NOT NULL,
+  `contact_no` varchar(50) NOT NULL,
+  `display` tinyint(2) NOT NULL DEFAULT '0' COMMENT '0:Blocked,1:Show',
+  `status` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1:active,0:Inactive',
+  `member_type` tinyint(4) NOT NULL DEFAULT '1' COMMENT '1:Free; 2:bronze,2:silver,3:Platinum,4:Gold',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tour_operator`
+--
+
+INSERT INTO `tour_operator` (`id`, `agent_name`, `logo`, `description`, `address_line_one`, `address_line_two`, `city`, `state_id`, `postal_code`, `landline`, `mobile1`, `mobile2`, `contact_no`, `display`, `status`, `member_type`, `created_at`, `updated_at`) VALUES
+(1, 'Demo Agent 1', '', 'This is demo description for Demo Agent 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim suscipit turpis interdum dignissim. Nullam semper est non congue ornare. Donec at posuere odio. Duis maximus eget diam vel egestas. Ut ultricies tellus porttitor orci egestas, id sagittis dolor suscipit. Sed volutpat at mauris sed suscipit. Sed nunc odio, luctus eu orci in, pharetra vehicula orci. Aliquam at erat eget dolor tempor facilisis. Nunc non velit malesuada, luctus purus sed, fermentum neque. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel consequat augue. Fusce convallis egestas ipsum, ac faucibus mi vestibulum id. Integer pharetra tortor et lectus varius, quis hendrerit nulla vestibulum. Donec vestibulum tristique placerat.\n\nDonec at finibus enim, tempus tristique leo. Cras mollis maximus sapien eget ultrices. Duis finibus diam et mauris posuere facilisis. Nam rutrum ante enim, ut ornare nisi ullamcorper vitae. Cras eu augue efficitur, aliquet magna eu, eleifend magna. Fusce tempus dolor vitae volutpat consectetur. Suspendisse dui augue, blandit non erat id, cursus maximus nisl. Vivamus sit amet ultrices nisi.\n\nMaecenas ut semper erat, sit amet ultricies ex. Fusce pulvinar nisl dolor, quis posuere magna rhoncus in. Sed a volutpat mi, at egestas nulla. In at elementum nisl. Suspendisse potenti. Phasellus maximus efficitur aliquam. Morbi non lacinia lacus, et porta sapien. Morbi ac varius lorem. Nam gravida, nulla vel fermentum porta, mauris eros scelerisque purus, at feugiat magna nibh cursus ipsum. Nam et nibh congue, tempor velit quis, consequat dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc efficitur urna in nunc vulputate, a sagittis ipsum egestas. Integer aliquet, magna non vehicula sagittis, lacus sapien suscipit lacus, non ultricies felis massa sed urna. Sed volutpat odio at urna malesuada porta in a tellus. Nunc eleifend, sapien quis convallis interdum, erat arcu egestas enim, sagittis sodales augue libero at ipsum. ', '', '', '', 2, '', '', '', '', '', 1, 1, 1, '2017-01-30 10:20:37', '2017-01-30 03:27:11'),
+(2, 'Demo Agent 2', '', 'This is demo description for Demo Agent 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim suscipit turpis interdum dignissim. Nullam semper est non congue ornare. Donec at posuere odio. Duis maximus eget diam vel egestas. Ut ultricies tellus porttitor orci egestas, id sagittis dolor suscipit. Sed volutpat at mauris sed suscipit. Sed nunc odio, luctus eu orci in, pharetra vehicula orci. Aliquam at erat eget dolor tempor facilisis. Nunc non velit malesuada, luctus purus sed, fermentum neque. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel consequat augue. Fusce convallis egestas ipsum, ac faucibus mi vestibulum id. Integer pharetra tortor et lectus varius, quis hendrerit nulla vestibulum. Donec vestibulum tristique placerat.\n\nDonec at finibus enim, tempus tristique leo. Cras mollis maximus sapien eget ultrices. Duis finibus diam et mauris posuere facilisis. Nam rutrum ante enim, ut ornare nisi ullamcorper vitae. Cras eu augue efficitur, aliquet magna eu, eleifend magna. Fusce tempus dolor vitae volutpat consectetur. Suspendisse dui augue, blandit non erat id, cursus maximus nisl. Vivamus sit amet ultrices nisi.\n\nMaecenas ut semper erat, sit amet ultricies ex. Fusce pulvinar nisl dolor, quis posuere magna rhoncus in. Sed a volutpat mi, at egestas nulla. In at elementum nisl. Suspendisse potenti. Phasellus maximus efficitur aliquam. Morbi non lacinia lacus, et porta sapien. Morbi ac varius lorem. Nam gravida, nulla vel fermentum porta, mauris eros scelerisque purus, at feugiat magna nibh cursus ipsum. Nam et nibh congue, tempor velit quis, consequat dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc efficitur urna in nunc vulputate, a sagittis ipsum egestas. Integer aliquet, magna non vehicula sagittis, lacus sapien suscipit lacus, non ultricies felis massa sed urna. Sed volutpat odio at urna malesuada porta in a tellus. Nunc eleifend, sapien quis convallis interdum, erat arcu egestas enim, sagittis sodales augue libero at ipsum. ', '', '', '', 2, '', '', '', '', '', 1, 1, 3, '2017-01-30 10:20:37', '2017-01-30 03:27:11'),
+(3, 'ADemo Agent 3', '', 'This is demo description for Demo Agent 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim suscipit turpis interdum dignissim. Nullam semper est non congue ornare. Donec at posuere odio. Duis maximus eget diam vel egestas. Ut ultricies tellus porttitor orci egestas, id sagittis dolor suscipit. Sed volutpat at mauris sed suscipit. Sed nunc odio, luctus eu orci in, pharetra vehicula orci. Aliquam at erat eget dolor tempor facilisis. Nunc non velit malesuada, luctus purus sed, fermentum neque. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel consequat augue. Fusce convallis egestas ipsum, ac faucibus mi vestibulum id. Integer pharetra tortor et lectus varius, quis hendrerit nulla vestibulum. Donec vestibulum tristique placerat.\n\nDonec at finibus enim, tempus tristique leo. Cras mollis maximus sapien eget ultrices. Duis finibus diam et mauris posuere facilisis. Nam rutrum ante enim, ut ornare nisi ullamcorper vitae. Cras eu augue efficitur, aliquet magna eu, eleifend magna. Fusce tempus dolor vitae volutpat consectetur. Suspendisse dui augue, blandit non erat id, cursus maximus nisl. Vivamus sit amet ultrices nisi.\n\nMaecenas ut semper erat, sit amet ultricies ex. Fusce pulvinar nisl dolor, quis posuere magna rhoncus in. Sed a volutpat mi, at egestas nulla. In at elementum nisl. Suspendisse potenti. Phasellus maximus efficitur aliquam. Morbi non lacinia lacus, et porta sapien. Morbi ac varius lorem. Nam gravida, nulla vel fermentum porta, mauris eros scelerisque purus, at feugiat magna nibh cursus ipsum. Nam et nibh congue, tempor velit quis, consequat dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc efficitur urna in nunc vulputate, a sagittis ipsum egestas. Integer aliquet, magna non vehicula sagittis, lacus sapien suscipit lacus, non ultricies felis massa sed urna. Sed volutpat odio at urna malesuada porta in a tellus. Nunc eleifend, sapien quis convallis interdum, erat arcu egestas enim, sagittis sodales augue libero at ipsum. ', '', '', '', 35, '', '', '', '', '', 1, 1, 3, '2017-01-30 10:20:37', '2017-01-30 03:27:11'),
+(4, 'Demo Agent 4', '', 'This is demo description for Demo Agent 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim suscipit turpis interdum dignissim. Nullam semper est non congue ornare. Donec at posuere odio. Duis maximus eget diam vel egestas. Ut ultricies tellus porttitor orci egestas, id sagittis dolor suscipit. Sed volutpat at mauris sed suscipit. Sed nunc odio, luctus eu orci in, pharetra vehicula orci. Aliquam at erat eget dolor tempor facilisis. Nunc non velit malesuada, luctus purus sed, fermentum neque. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel consequat augue. Fusce convallis egestas ipsum, ac faucibus mi vestibulum id. Integer pharetra tortor et lectus varius, quis hendrerit nulla vestibulum. Donec vestibulum tristique placerat.\n\nDonec at finibus enim, tempus tristique leo. Cras mollis maximus sapien eget ultrices. Duis finibus diam et mauris posuere facilisis. Nam rutrum ante enim, ut ornare nisi ullamcorper vitae. Cras eu augue efficitur, aliquet magna eu, eleifend magna. Fusce tempus dolor vitae volutpat consectetur. Suspendisse dui augue, blandit non erat id, cursus maximus nisl. Vivamus sit amet ultrices nisi.\n\nMaecenas ut semper erat, sit amet ultricies ex. Fusce pulvinar nisl dolor, quis posuere magna rhoncus in. Sed a volutpat mi, at egestas nulla. In at elementum nisl. Suspendisse potenti. Phasellus maximus efficitur aliquam. Morbi non lacinia lacus, et porta sapien. Morbi ac varius lorem. Nam gravida, nulla vel fermentum porta, mauris eros scelerisque purus, at feugiat magna nibh cursus ipsum. Nam et nibh congue, tempor velit quis, consequat dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc efficitur urna in nunc vulputate, a sagittis ipsum egestas. Integer aliquet, magna non vehicula sagittis, lacus sapien suscipit lacus, non ultricies felis massa sed urna. Sed volutpat odio at urna malesuada porta in a tellus. Nunc eleifend, sapien quis convallis interdum, erat arcu egestas enim, sagittis sodales augue libero at ipsum. ', '', '', '', 11, '', '', '', '', '', 1, 1, 1, '2017-01-30 10:20:37', '2017-01-30 03:27:11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -550,7 +641,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `name`, `email`, `password`, `user_type`, `approve`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'dfdfg', 'admin@admin.com', '$2y$10$/FcvO6UVwfvO0DFfqdJm5upIYhJb3dlRyUE3QIkTUk7v6Yt0dqxZ.', 1, 1, 'bXUQ5djZM4zDgcNuqlcy1bGpGIWyNOzxww9qpR8GqDlShFNurWjqkdYbHEee', '0000-00-00 00:00:00', '2017-01-16 23:49:24');
+(1, 'admin', 'dfdfg', 'admin@admin.com', '$2y$10$/FcvO6UVwfvO0DFfqdJm5upIYhJb3dlRyUE3QIkTUk7v6Yt0dqxZ.', 1, 1, 'xQvoO56EZQYR8oztdXyCMJJ2mbXorI25pHS14zgRR3b0uTnfdobUC1fb9WeF', '0000-00-00 00:00:00', '2017-01-25 02:20:09');
 
 --
 -- Indexes for dumped tables
@@ -587,10 +678,22 @@ ALTER TABLE `holiday_home`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `operator_service`
+--
+ALTER TABLE `operator_service`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`), ADD KEY `password_resets_token_index` (`token`);
+
+--
+-- Indexes for table `service_offer`
+--
+ALTER TABLE `service_offer`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `settings`
@@ -602,6 +705,12 @@ ALTER TABLE `settings`
 -- Indexes for table `state`
 --
 ALTER TABLE `state`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tour_operator`
+--
+ALTER TABLE `tour_operator`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -638,7 +747,17 @@ ALTER TABLE `destination_image`
 -- AUTO_INCREMENT for table `holiday_home`
 --
 ALTER TABLE `holiday_home`
-  MODIFY `id` bigint(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` bigint(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `operator_service`
+--
+ALTER TABLE `operator_service`
+  MODIFY `id` bigint(30) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `service_offer`
+--
+ALTER TABLE `service_offer`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `settings`
 --
@@ -649,6 +768,11 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `state`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
+--
+-- AUTO_INCREMENT for table `tour_operator`
+--
+ALTER TABLE `tour_operator`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `users`
 --
