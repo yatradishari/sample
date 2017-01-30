@@ -19,6 +19,9 @@
                         <p class="desc">
                             {!! get_state($operator->state_id,'all','x') !!}    
                         </p>
+                        <p class="desc">
+                           {!! get_service(1) !!}  
+                        </p>
                         <p class="desc">{!! short($operator->description,200)!!}</p>
                     </div>
                     <div class="social">
@@ -169,7 +172,7 @@
 			position: relative;
 			display: block;
 			width: 100%;
-			height: 120px;
+			height: 150px;
 			padding: 0px;
 		}
 		.event-list > li > time,
@@ -178,7 +181,7 @@
 		}
 		.event-list > li > time,
 		.event-list > li > img {
-			width: 120px;
+			width: 150px;
 			float: left;
 		}
 		.event-list > li > .info {
@@ -187,14 +190,14 @@
 		}
 		.event-list > li > time,
 		.event-list > li > img {
-			width: 120px;
-			height: 120px;
+			width: 150px;
+			height: 150px;
 			padding: 0px;
 			margin: 0px;
 		}
 		.event-list > li > .info {
 			position: relative;
-			height: 120px;
+			height: 150px;
 			text-align: left;
 			padding-right: 40px;
 		}	
