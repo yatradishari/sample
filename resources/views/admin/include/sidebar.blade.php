@@ -31,7 +31,7 @@
 
 								<ul class="submenu">
 									<li class="">
-										<a href="top-menu.html">
+										<a href="{{ url('/admin/destination/state') }}">
 											<i class="menu-icon fa fa-eye pink"></i>
 											View
 										</a>

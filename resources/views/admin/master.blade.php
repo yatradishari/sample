@@ -41,6 +41,7 @@
 		<script src="{{ asset('/admin/assets/js/html5shiv.min.js') }}"></script>
 		<script src="{{ asset('/admin/assets/js/respond.min.js') }}"></script>
 		<![endif]-->
+        @yield('script')  
 	</head>
 
 	<body class="no-skin">
@@ -98,24 +99,7 @@
 						</div><!-- /.page-header -->
 
 						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="alert alert-block alert-info">
-									<button type="button" class="close" data-dismiss="alert">
-										<i class="ace-icon fa fa-times"></i>
-									</button>
-									The following sample email templates are converted using the provided email tool which
-	converts normal Bootstrap HTML to email friendly table layout with inline CSS!
-								</div>
-
-								<div class="space-12"></div>
-
-								<div class="row">
-									
-								</div>
-
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
+							@yield('content')
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->
 				</div>
@@ -161,7 +145,7 @@
 		<!-- ace scripts -->
 		<script src="{{ asset('/admin/assets/js/ace-elements.min.js') }}"></script>
 		<script src="{{ asset('/admin/assets/js/ace.min.js') }}"></script>
-
+        
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
 			jQuery(function($) {
@@ -381,5 +365,6 @@
 			
 			})
 		</script>
+        
 	</body>
 </html>

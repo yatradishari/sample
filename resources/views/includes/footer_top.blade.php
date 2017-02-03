@@ -24,7 +24,7 @@
                     <h3 class="widget-title">Helpful Links</h3>
                     <ul class="list-arrow">
                         <li><a href="javascript:void(0);">Tour Operators</a></li>
-                        <li><a href="javascript:void(0);">Submit Your Location</a></li>
+                        <li><a href="{{ url('/member') }}">Submit Your Location</a></li>
                     </ul>
                 </div>
             </div>

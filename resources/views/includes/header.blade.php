@@ -15,6 +15,11 @@
                     <li class="menu-item"><a href="{{ url('/contactus') }}">Contact</a></li>
                     <li class="menu-item"><a href="{{ url('/touroperators') }}">Our Partners</a></li>
                     <li class="menu-item"><a href="javascript:void(0);">Blog</a></li>
+                    
+                        <li class="menu-item"><a href="{{ url('/member/logout') }}">Logout</a></li>
+                    
+                        <li class="menu-item"><a href="{{ url('/member') }}">Login</a></li>
+                   
                 </ul>
             </nav>
             

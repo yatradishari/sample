@@ -20,6 +20,7 @@ Route::controller('touroperators', 'OperatorController');
 Route::get('holidayhomes', 'HolidayhomeController@getIndex');
 Route::controller('holidayhomes/{state_id}', 'HolidayhomeController');
 Route::controller('contactus', 'ContactController');
+Route::controller('member', 'MemberController');
 
 //Route::controllers([
 //	'auth' => 'Auth\AuthController',
@@ -35,6 +36,7 @@ Route::controllers([
 	
 Route::group(['namespace'=> 'Admin' , 'middleware' => 'auth'] , function(){	
     Route::controller('admin/dashboard'	, 'DashboardController' 	); 
+    Route::controller('admin/destination'	, 'DestinationController' 	); 
 //	Route::controller('admin/auth'	, 'AuthController' 	); 	
 	//Route::controller('admin/destination'	, 'DestinationController' 	); 	
 	//Route::controller('admin/holidayhome'	, 'HolidayhomeController' 	); 	
